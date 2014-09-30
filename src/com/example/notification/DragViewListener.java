@@ -31,16 +31,28 @@ public class DragViewListener implements OnTouchListener {
 		case MotionEvent.ACTION_UP:
 			int x_index = left / cells[0][0].getWidth();
 			int y_index = top / cells[0][0].getHeight();
-			if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 1) {
-				cells[y_index][x_index]
-						.setImageResource(R.drawable.icon_right_hand_up);
+			if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 9) {
+				if (view.getId() == R.id.imageView1) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_right_hand_up);
+				} else if (view.getId() == R.id.imageView2) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_right_hand_down);
+				} else if (view.getId() == R.id.imageView3) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_left_hand_up);
+				} else if (view.getId() == R.id.imageView4) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_left_hand_down);
+				}
+
+			} else {
+
 			}
 		}
 
 		oldx = x;
 		oldy = y;
-
 		return true;
 	}
-
 }

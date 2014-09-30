@@ -18,45 +18,72 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher" />
-
-    <ImageButton
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:onClick="onButtonClick1"
         android:src="@drawable/icon_right_hand_up" />
 
-    <ImageButton
-        android:id="@+id/button2"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/button1"
-        android:onClick="onButtonClick2"
+        android:layout_toRightOf="@id/imageView1"
         android:src="@drawable/icon_right_hand_down" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/imageView2"
+        android:src="@drawable/icon_left_hand_up" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/imageView3"
+        android:src="@drawable/icon_left_hand_down" />
+
+    <!-- 背景のはてなたち -->
+	<!-- 1行目 -->
+    <ImageView
+        android:id="@+id/image0_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image0_0"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image1_0"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 2行目 -->
+    <ImageView
+        android:id="@+id/image0_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_0"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
 
     <ImageView
         android:id="@+id/image1_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
-
-    <ImageView
-        android:id="@+id/image1_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image1_1"
-        android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
-
-    <ImageView
-        android:id="@+id/image1_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image1_2"
+        android:layout_below="@id/image1_0"
+        android:layout_toRightOf="@id/image0_1"
         android:scaleType="fitStart"
         android:src="@drawable/icon_if" />
 
@@ -64,7 +91,25 @@
         android:id="@+id/image2_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/image2_0"
+        android:layout_toRightOf="@id/image1_1"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 3行目 -->
+    <ImageView
+        android:id="@+id/image0_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_1"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/image1_1"
+        android:layout_toRightOf="@id/image0_2"
         android:scaleType="fitStart"
         android:src="@drawable/icon_if" />
 
@@ -72,8 +117,25 @@
         android:id="@+id/image2_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image2_1"
+        android:layout_below="@id/image2_1"
+        android:layout_toRightOf="@id/image1_2"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 4行目 -->
+    <ImageView
+        android:id="@+id/image0_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_2"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/image1_2"
+        android:layout_toRightOf="@id/image0_3"
         android:scaleType="fitStart"
         android:src="@drawable/icon_if" />
 
@@ -81,8 +143,164 @@
         android:id="@+id/image2_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image2_2"
+        android:layout_below="@id/image2_2"
+        android:layout_toRightOf="@id/image1_3"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 5行目 -->
+    <ImageView
+        android:id="@+id/image0_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_3"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/image1_3"
+        android:layout_toRightOf="@id/image0_4"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2_3"
+        android:layout_toRightOf="@id/image1_4"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 6行目 -->
+    <ImageView
+        android:id="@+id/image0_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_4"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_4"
+        android:layout_toRightOf="@id/image0_5"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_4"
+        android:layout_toRightOf="@id/image1_5"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 7行目 -->
+    <ImageView
+        android:id="@+id/image0_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_5"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_5"
+        android:layout_toRightOf="@id/image0_6"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2_5"
+        android:layout_toRightOf="@id/image1_6"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 8行目 -->
+    <ImageView
+        android:id="@+id/image0_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_6"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_6"
+        android:layout_toRightOf="@id/image0_7"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2_6"
+        android:layout_toRightOf="@id/image1_7"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 9行目 -->
+    <ImageView
+        android:id="@+id/image0_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_7"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_7"
+        android:layout_toRightOf="@id/image0_8"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2_7"
+        android:layout_toRightOf="@id/image1_8"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+	<!-- 10行目 -->
+    <ImageView
+        android:id="@+id/image0_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image0_8"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image1_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1_8"
+        android:layout_toRightOf="@id/image0_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_if" />
+
+    <ImageView
+        android:id="@+id/image2_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2_8"
+        android:layout_toRightOf="@id/image1_9"
         android:scaleType="fitStart"
         android:src="@drawable/icon_if" />
 
