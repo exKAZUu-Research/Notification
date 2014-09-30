@@ -21,6 +21,14 @@ public class MainActivity extends Activity {
 		ImageView dragView2 = (ImageView) findViewById(R.id.imageView2);
 		ImageView dragView3 = (ImageView) findViewById(R.id.imageView3);
 		ImageView dragView4 = (ImageView) findViewById(R.id.imageView4);
+		ImageView dragView5 = (ImageView) findViewById(R.id.imageView5);
+		ImageView dragView6 = (ImageView) findViewById(R.id.imageView6);
+		ImageView dragView7 = (ImageView) findViewById(R.id.imageView7);
+		ImageView dragView8 = (ImageView) findViewById(R.id.imageView8);
+		ImageView dragView9 = (ImageView) findViewById(R.id.imageView9);
+		ImageView dragView10 = (ImageView) findViewById(R.id.imageView10);
+		ImageView dragView11 = (ImageView) findViewById(R.id.imageView11);
+		ImageView dragGomi = (ImageView) findViewById(R.id.imageGomi);
 		ImageView cell = (ImageView) findViewById(R.id.image1_1);
 
 		ImageView[][] cells = new ImageView[3][10];
@@ -64,6 +72,22 @@ public class MainActivity extends Activity {
 		dragView3.setOnTouchListener(listener3);
 		DragViewListener listener4 = new DragViewListener(dragView4, cells);
 		dragView4.setOnTouchListener(listener4);
+		DragViewListener listener5 = new DragViewListener(dragView5, cells);
+		dragView5.setOnTouchListener(listener5);
+		DragViewListener listener6 = new DragViewListener(dragView6, cells);
+		dragView6.setOnTouchListener(listener6);
+		DragViewListener listener7 = new DragViewListener(dragView7, cells);
+		dragView7.setOnTouchListener(listener7);
+		DragViewListener listener8 = new DragViewListener(dragView8, cells);
+		dragView8.setOnTouchListener(listener8);
+		DragViewListener listener9 = new DragViewListener(dragView9, cells);
+		dragView9.setOnTouchListener(listener9);
+		DragViewListener listener10 = new DragViewListener(dragView10, cells);
+		dragView10.setOnTouchListener(listener10);
+		DragViewListener listener11 = new DragViewListener(dragView11, cells);
+		dragView11.setOnTouchListener(listener11);
+		DragViewListener listenerGomi = new DragViewListener(dragGomi, cells);
+		dragGomi.setOnTouchListener(listenerGomi);
 	}
 
 	@Override

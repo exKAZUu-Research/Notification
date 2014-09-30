@@ -44,10 +44,34 @@ public class DragViewListener implements OnTouchListener {
 				} else if (view.getId() == R.id.imageView4) {
 					cells[x_index][y_index]
 							.setImageResource(R.drawable.icon_left_hand_down);
+				} else if (view.getId() == R.id.imageView5) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_loop);
+				} else if (view.getId() == R.id.imageView6) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_kokomade);
+				} else if (view.getId() == R.id.imageView7) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_yellow);
+				} else if (view.getId() == R.id.imageView8) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_orange);
+				} else if (view.getId() == R.id.imageView9) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_if);
+				} else if (view.getId() == R.id.imageView10) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_else);
+				} else if (view.getId() == R.id.imageView11) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_if_kokomade);
+				} else if (view.getId() == R.id.imageGomi) {
+					cells[x_index][y_index]
+							.setImageResource(R.drawable.icon_if);
 				}
 
 			} else {
-
+				// 初期状態に戻しておきたい
 			}
 		}
 
