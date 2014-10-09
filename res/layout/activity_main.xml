@@ -8,11 +8,45 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <!--
     <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+    -->
+
+
+    <!-- 画面を分割する -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/programs"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- アイコンたち -->
 
     <ImageView
         android:id="@+id/imageView7"
@@ -116,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_0"
@@ -124,7 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/image0_0"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_0"
@@ -132,7 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/image1_0"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 2行目 -->
 
     <ImageView
@@ -141,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_0"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_1"
@@ -150,7 +184,7 @@
         android:layout_below="@id/image1_0"
         android:layout_toRightOf="@id/image0_1"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_1"
@@ -159,7 +193,7 @@
         android:layout_below="@id/image2_0"
         android:layout_toRightOf="@id/image1_1"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 3行目 -->
 
     <ImageView
@@ -168,7 +202,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_1"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_2"
@@ -177,7 +211,7 @@
         android:layout_below="@id/image1_1"
         android:layout_toRightOf="@id/image0_2"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_2"
@@ -186,7 +220,7 @@
         android:layout_below="@id/image2_1"
         android:layout_toRightOf="@id/image1_2"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 4行目 -->
 
     <ImageView
@@ -195,7 +229,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_2"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_3"
@@ -204,7 +238,7 @@
         android:layout_below="@id/image1_2"
         android:layout_toRightOf="@id/image0_3"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_3"
@@ -213,7 +247,7 @@
         android:layout_below="@id/image2_2"
         android:layout_toRightOf="@id/image1_3"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 5行目 -->
 
     <ImageView
@@ -222,7 +256,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_3"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_4"
@@ -231,7 +265,7 @@
         android:layout_below="@id/image1_3"
         android:layout_toRightOf="@id/image0_4"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_4"
@@ -240,7 +274,7 @@
         android:layout_below="@id/image2_3"
         android:layout_toRightOf="@id/image1_4"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 6行目 -->
 
     <ImageView
@@ -249,7 +283,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_4"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_5"
@@ -258,7 +292,7 @@
         android:layout_below="@id/image1_4"
         android:layout_toRightOf="@id/image0_5"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_5"
@@ -267,7 +301,7 @@
         android:layout_below="@id/image1_4"
         android:layout_toRightOf="@id/image1_5"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 7行目 -->
 
     <ImageView
@@ -276,7 +310,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_5"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_6"
@@ -285,7 +319,7 @@
         android:layout_below="@id/image1_5"
         android:layout_toRightOf="@id/image0_6"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_6"
@@ -294,7 +328,7 @@
         android:layout_below="@id/image2_5"
         android:layout_toRightOf="@id/image1_6"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 8行目 -->
 
     <ImageView
@@ -303,7 +337,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_6"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_7"
@@ -312,7 +346,7 @@
         android:layout_below="@id/image1_6"
         android:layout_toRightOf="@id/image0_7"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_7"
@@ -321,7 +355,7 @@
         android:layout_below="@id/image2_6"
         android:layout_toRightOf="@id/image1_7"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
     <!-- 9行目 -->
 
     <ImageView
@@ -330,7 +364,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image0_7"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image1_8"
@@ -339,7 +373,7 @@
         android:layout_below="@id/image1_7"
         android:layout_toRightOf="@id/image0_8"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+        android:src="@drawable/haikei" />
 
     <ImageView
         android:id="@+id/image2_8"
@@ -348,33 +382,9 @@
         android:layout_below="@id/image2_7"
         android:layout_toRightOf="@id/image1_8"
         android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
-    <!-- 10行目 -->
+        android:src="@drawable/haikei" />
 
-    <ImageView
-        android:id="@+id/image0_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/image0_8"
-        android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
 
-    <ImageView
-        android:id="@+id/image1_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/image1_8"
-        android:layout_toRightOf="@id/image0_9"
-        android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
-
-    <ImageView
-        android:id="@+id/image2_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/image2_8"
-        android:layout_toRightOf="@id/image1_9"
-        android:scaleType="fitStart"
-        android:src="@drawable/icon_if" />
+ 
 
 </RelativeLayout>

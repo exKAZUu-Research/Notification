@@ -21,22 +21,23 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int icon_else=0x7f020001;
-        public static final int icon_if=0x7f020002;
-        public static final int icon_if_kokomade=0x7f020003;
-        public static final int icon_jump=0x7f020004;
-        public static final int icon_kokomade=0x7f020005;
-        public static final int icon_left_hand_down=0x7f020006;
-        public static final int icon_left_hand_up=0x7f020007;
-        public static final int icon_loop=0x7f020008;
-        public static final int icon_orange=0x7f020009;
-        public static final int icon_right_hand_down=0x7f02000a;
-        public static final int icon_right_hand_up=0x7f02000b;
-        public static final int icon_yellow=0x7f02000c;
+        public static final int haikei=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int icon_else=0x7f020002;
+        public static final int icon_if=0x7f020003;
+        public static final int icon_if_kokomade=0x7f020004;
+        public static final int icon_jump=0x7f020005;
+        public static final int icon_kokomade=0x7f020006;
+        public static final int icon_left_hand_down=0x7f020007;
+        public static final int icon_left_hand_up=0x7f020008;
+        public static final int icon_loop=0x7f020009;
+        public static final int icon_orange=0x7f02000a;
+        public static final int icon_right_hand_down=0x7f02000b;
+        public static final int icon_right_hand_up=0x7f02000c;
+        public static final int icon_yellow=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f08002b;
+        public static final int action_settings=0x7f080028;
         public static final int image0_0=0x7f08000d;
         public static final int image0_1=0x7f080010;
         public static final int image0_2=0x7f080013;
@@ -46,7 +47,6 @@ public final class R {
         public static final int image0_6=0x7f08001f;
         public static final int image0_7=0x7f080022;
         public static final int image0_8=0x7f080025;
-        public static final int image0_9=0x7f080028;
         public static final int image1_0=0x7f08000e;
         public static final int image1_1=0x7f080011;
         public static final int image1_2=0x7f080014;
@@ -56,7 +56,6 @@ public final class R {
         public static final int image1_6=0x7f080020;
         public static final int image1_7=0x7f080023;
         public static final int image1_8=0x7f080026;
-        public static final int image1_9=0x7f080029;
         public static final int image2_0=0x7f08000f;
         public static final int image2_1=0x7f080012;
         public static final int image2_2=0x7f080015;
@@ -66,7 +65,6 @@ public final class R {
         public static final int image2_6=0x7f080021;
         public static final int image2_7=0x7f080024;
         public static final int image2_8=0x7f080027;
-        public static final int image2_9=0x7f08002a;
         public static final int imageGomi=0x7f080006;
         public static final int imageView1=0x7f080007;
         public static final int imageView10=0x7f080004;
@@ -79,7 +77,7 @@ public final class R {
         public static final int imageView7=0x7f080001;
         public static final int imageView8=0x7f080002;
         public static final int imageView9=0x7f080003;
-        public static final int textview1=0x7f080000;
+        public static final int programs=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
