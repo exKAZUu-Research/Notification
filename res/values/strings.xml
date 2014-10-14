@@ -6,5 +6,8 @@
     <string name="hello_world"></string>
     <string name="imgstring1">&lt;img src=\"icon_right_hand_up\" &gt;</string>
     <string name="imgstring2">&lt;img src=\"icon_right_hand_down\" &gt;</string>
+    <string name="title_activity_next">NextActivity</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
 
 </resources>
