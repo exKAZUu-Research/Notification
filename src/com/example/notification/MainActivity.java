@@ -2,10 +2,12 @@ package com.example.notification;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 //import android.text.Html;
 //import android.text.Spanned;
 //import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 //import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,7 +52,7 @@ public class MainActivity extends Activity {
 		cells[1][8] = (ImageView) findViewById(R.id.image1_8);
 		cells[2][8] = (ImageView) findViewById(R.id.image2_8);
 
-		//右側のテキストたち
+		// 右側のテキストたち
 		String[][] program = new String[3][9];
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 3; j++) {
@@ -131,6 +133,11 @@ public class MainActivity extends Activity {
 
 	String html = "";
 
+	public void onClickNextButton(View v) {
+		Intent intent = new Intent(this, NextActivity.class);
+		//intent.putExtra("program", "program[][0]");
+		startActivity(intent);
+	}
 	/*
 	 * public void onButtonClick1(View v) { ImageGetterImpl imageGetter = new
 	 * ImageGetterImpl( getApplicationContext()); TextView tv = (TextView)
