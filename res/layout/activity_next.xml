@@ -24,4 +24,19 @@
         android:layout_alignParentBottom="true"
         android:text="@string/finish" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MusicStart"
+        android:layout_above="@+id/button1"
+        android:text="Music"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MusicStop"
+        android:layout_above="@id/button2"
+        android:text="Stop"/>
 </RelativeLayout>
