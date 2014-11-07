@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="18"
         android:targetSdkVersion="17" />
 
     <application
@@ -26,6 +26,13 @@
             android:name="com.example.notification.NextActivity"
             android:label="@string/title_activity_next" >
         </activity>
+
+        <service android:name=".NotificationListener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

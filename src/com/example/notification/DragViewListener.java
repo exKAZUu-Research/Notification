@@ -1,8 +1,5 @@
 package com.example.notification;
 
-//import android.util.Log;
-//import android.util.Log;
-
 import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.View;
