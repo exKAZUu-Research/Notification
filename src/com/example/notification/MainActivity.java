@@ -9,11 +9,21 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 //import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
     String[][] program = new String[3][9];
+    String[] commands = new String[4];
+    String[][] newcoms;
+    ArrayList<String> Gcom = new ArrayList<String>();
+    ArrayList<String> Ccom = new ArrayList<String>();
+    ArrayList<String> Tcom = new ArrayList<String>();
+    ArrayList<String> Fcom = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +108,7 @@ public class MainActivity extends Activity {
     String html = "";
 
     //nextボタンの動作
-    public void onClickNextButton(View v) {
+    public void onClickNextButton(View v) {     //画面遷移
         Intent intent = new Intent(this, NextActivity.class);
         startActivity(intent);
     }
@@ -112,8 +122,8 @@ public class MainActivity extends Activity {
                 music.setLooping(true); //ループ設定
                 music.seekTo(0);    //再生位置を0ミリ秒に設定
                 music.start();      //再生開始
-            }else{
-                if(music.isPlaying()){
+            } else {
+                if (music.isPlaying()) {
                     music.pause();  //音をとめる
                 }
             }
@@ -124,8 +134,75 @@ public class MainActivity extends Activity {
                 e.printStackTrace();
             }
         }
-        if(music.isPlaying()){
+        if (music.isPlaying()) {
             music.pause();
+        }
+    }
+
+    public void onClickSaveButton(View v) {
+        ArrayList<String> oldcommands = new ArrayList<String>();
+        for (int j = 0; j < 9; j++) {
+            for (int i = 0; i < 3; i++) {
+                if (program[i][j] != "") {
+                    oldcommands.add(program[i][j]);
+                }
+            }
+        }
+        Parser parser = new Parser(oldcommands, commands, Gcom, Ccom, Tcom, Fcom);
+        parser.main();
+    }
+
+    public void onClickGmailButton(View v) {
+        TextView text = (TextView) findViewById(R.id.programs);
+        text.setText(commands[0]);
+        LED(Gcom);
+    }
+
+    public void onClickCalendarButton(View v) {
+        TextView text = (TextView) findViewById(R.id.programs);
+        text.setText(commands[1]);
+        LED(Ccom);
+    }
+
+    public void onClickTwitterButton(View v) {
+        TextView text = (TextView) findViewById(R.id.programs);
+        text.setText(commands[2]);
+        LED(Tcom);
+    }
+
+    public void onClickFacebookButton(View v) {
+        TextView text = (TextView) findViewById(R.id.programs);
+        text.setText(commands[3]);
+        LED(Fcom);
+    }
+
+    public void LED(ArrayList<String> com) {
+        MediaPlayer music;
+        music = MediaPlayer.create(this, R.raw.led1);
+        //音をならす
+        music.setLooping(true); //ループ設定
+        music.seekTo(0);    //再生位置を0ミリ秒に設定
+
+        for (int i = 0; i < com.size(); i++) {
+            if (com.get(i).equals("ON")) {
+                if (!music.isPlaying()) {
+                    music.start();      //再生開始
+                }
+                try { // 1秒待機
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else if (com.get(i).equals("OFF")) {
+                if (music.isPlaying()) {
+                    music.pause();
+                }
+                try { // 1秒待機
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

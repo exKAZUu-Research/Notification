@@ -699,7 +699,7 @@
         android:layout_height="122dip"
         android:layout_below="@id/image2_8"
         android:layout_toRightOf="@id/image2_8"
-        android:src="@drawable/dustbox"/>
+        android:src="@drawable/dustbox" />
 
     <Button
         android:id="@+id/button1"
@@ -711,13 +711,56 @@
         android:text="@string/next" />
 
     <Button
-        android:id ="@+id/button2"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/button1"
         android:onClick="onClickStartButton"
-        android:text="Start"/>
+        android:text="Start" />
 
+    <Button
+        android:id="@+id/SaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/button1"
+        android:onClick="onClickSaveButton"
+        android:text="保存"/>
+
+    <Button
+        android:id="@+id/Gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickGmailButton"
+        android:text="Gmail"/>
+
+    <Button
+        android:id="@+id/Calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/Gmail"
+        android:onClick="onClickCalendarButton"
+        android:text="Calendar"/>
+
+    <Button
+        android:id="@+id/Twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/Calendar"
+        android:onClick="onClickTwitterButton"
+        android:text="Twitter"/>
+
+    <Button
+        android:id="@+id/Faebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/Twitter"
+        android:onClick="onClickFacebookButton"
+        android:text="Facebook"/>
 
 </RelativeLayout>

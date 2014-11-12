@@ -6,11 +6,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 
 public class NextActivity extends Activity {
     MediaPlayer music;
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +21,7 @@ public class NextActivity extends Activity {
 		getMenuInflater().inflate(R.menu.next, menu);
 		return true;
 	}
-
-    public void MusicStart(View v){
+    public void onClickMusicStart(View v){
         //音をならす
         music = MediaPlayer.create(this, R.raw.led1);
         music.setLooping(true); //ループ設定
@@ -32,15 +29,22 @@ public class NextActivity extends Activity {
         music.start();      //再生開始
     }
 
-    public void MusicStop(View v){
+    public void onClickMusicStop(View v){
+        music = MediaPlayer.create(this, R.raw.led1);
         if(music.isPlaying()){
             music.pause();
         }
     }
   	public void onClickFinishButton(View v) {
+        music = MediaPlayer.create(this, R.raw.led1);
         if(music.isPlaying()){
             music.pause();
         }
 		finish();
 	}
+
+    public void onClickLinearactivity(View v){
+        Intent intent1 = new Intent(NextActivity.this, ThirdActivity.class);
+        startActivity(intent1);
+    }
 }

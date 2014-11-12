@@ -1,13 +1,22 @@
 package com.example.notification;
 
+import android.app.Activity;
 import android.os.Handler;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class NotificationListener extends NotificationListenerService {
 
     private Handler handler =  new Handler();
+
+    private Activity activity;
+    public NotificationListener(Activity activity){
+        this.activity = activity;
+    }
+
+    TextView textview = (TextView)activity.findViewById(R.id.text_message);
 
     // [1]
     @Override
@@ -17,6 +26,7 @@ public class NotificationListener extends NotificationListenerService {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                textview.setText(msg);
             }
         });
     }
@@ -29,6 +39,7 @@ public class NotificationListener extends NotificationListenerService {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                textview.setText(msg);
             }
         });
     }

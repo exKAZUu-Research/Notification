@@ -48,27 +48,27 @@ public class DragViewListener implements OnTouchListener {
             case MotionEvent.ACTION_UP:
                 if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 8) {
                     if (view.getId() == R.id.imageView1) {
-                        program[x_index][y_index] = "右腕を上げる";
+                        program[x_index][y_index] = "Gmail";
                     } else if (view.getId() == R.id.imageView2) {
-                        program[x_index][y_index] = "右腕を下げる";
+                        program[x_index][y_index] = "Clendar";
                     } else if (view.getId() == R.id.imageView3) {
-                        program[x_index][y_index] = "左腕を上げる";
+                        program[x_index][y_index] = "Twitter";
                     } else if (view.getId() == R.id.imageView4) {
-                        program[x_index][y_index] = "左腕を下げる";
+                        program[x_index][y_index] = "Facebook";
                     } else if (view.getId() == R.id.imageView5) {
-                        program[x_index][y_index] = "くりかえし";
+                        program[x_index][y_index] = "for";
                     } else if (view.getId() == R.id.imageView6) {
-                        program[x_index][y_index] = "ここまで";
+                        program[x_index][y_index] = "forend";
                     } else if (view.getId() == R.id.imageView7) {
-                        program[x_index][y_index] = "黄色";
+                        program[x_index][y_index] = "ON";
                     } else if (view.getId() == R.id.imageView8) {
-                        program[x_index][y_index] = "茶色";
+                        program[x_index][y_index] = "OFF";
                     } else if (view.getId() == R.id.imageView9) {
-                        program[x_index][y_index] = "もしも";
+                        program[x_index][y_index] = "if";
                     } else if (view.getId() == R.id.imageView10) {
-                        program[x_index][y_index] = "もしくは";
+                        program[x_index][y_index] = "else";
                     } else if (view.getId() == R.id.imageView11) {
-                        program[x_index][y_index] = "もしおわり";
+                        program[x_index][y_index] = "ifend";
                     } else if (view.getId() == R.id.imageView01) {
                         program[x_index][y_index] = "1";
                     } else if (view.getId() == R.id.imageView02) {
@@ -132,27 +132,27 @@ public class DragViewListener implements OnTouchListener {
                 //アイコンに変更
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 9; j++) {
-                        if (program[i][j] == "右腕を上げる") {
+                        if (program[i][j] == "Gmail") {
                             cells[i][j].setImageResource(R.drawable.icon_right_hand_up);
-                        } else if (program[i][j] == "右腕を下げる") {
+                        } else if (program[i][j] == "Clendar") {
                             cells[i][j].setImageResource(R.drawable.icon_right_hand_down);
-                        } else if (program[i][j] == "左腕を上げる") {
+                        } else if (program[i][j] == "Twitter") {
                             cells[i][j].setImageResource(R.drawable.icon_left_hand_up);
-                        } else if (program[i][j] == "左腕を下げる") {
+                        } else if (program[i][j] == "Facebook") {
                             cells[i][j].setImageResource(R.drawable.icon_left_hand_down);
-                        } else if (program[i][j] == "くりかえし") {
+                        } else if (program[i][j] == "for") {
                             cells[i][j].setImageResource(R.drawable.icon_loop);
-                        } else if (program[i][j] == "ここまで") {
+                        } else if (program[i][j] == "forend") {
                             cells[i][j].setImageResource(R.drawable.icon_kokomade);
-                        } else if (program[i][j] == "黄色") {
+                        } else if (program[i][j] == "ON") {
                             cells[i][j].setImageResource(R.drawable.icon_yellow);
-                        } else if (program[i][j] == "茶色") {
+                        } else if (program[i][j] == "OFF") {
                             cells[i][j].setImageResource(R.drawable.icon_orange);
-                        } else if (program[i][j] == "もしも") {
+                        } else if (program[i][j] == "if") {
                             cells[i][j].setImageResource(R.drawable.icon_if);
-                        } else if (program[i][j] == "もしくは") {
+                        } else if (program[i][j] == "else") {
                             cells[i][j].setImageResource(R.drawable.icon_else);
-                        } else if (program[i][j] == "もしおわり") {
+                        } else if (program[i][j] == "ifend") {
                             cells[i][j].setImageResource(R.drawable.icon_if_kokomade);
                         } else if (program[i][j] == "1") {
                             cells[i][j].setImageResource(R.drawable.num1);

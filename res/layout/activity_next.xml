@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".NextActivity" >
+    tools:context=".NextActivity">
 
     <TextView
         android:id="@+id/text_message"
@@ -28,15 +28,51 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="MusicStart"
+        android:onClick="onClickMusicStart"
         android:layout_above="@+id/button1"
-        android:text="Music"/>
+        android:text="Music" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="MusicStop"
+        android:onClick="onClickMusicStop"
         android:layout_above="@id/button2"
-        android:text="Stop"/>
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickLinearactivity"
+        android:layout_above="@id/button3"
+        android:text="Linear"/>
+
+
+    <!--<ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarSize="100dip"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumble">
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        </LinearLayout>
+
+    </ScrollView>-->
 </RelativeLayout>
