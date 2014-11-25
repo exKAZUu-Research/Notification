@@ -44,7 +44,7 @@
         android:layout_width="61dip"
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
-        android:src="@drawable/icon_right_hand_up" />
+        android:src="@drawable/icon_gmail" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -52,7 +52,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView1"
-        android:src="@drawable/icon_right_hand_down" />
+        android:src="@drawable/icon_calender" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -60,7 +60,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView2"
-        android:src="@drawable/icon_left_hand_up" />
+        android:src="@drawable/icon_twitter" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -68,7 +68,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView3"
-        android:src="@drawable/icon_left_hand_down" />
+        android:src="@drawable/icon_fb" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -92,7 +92,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView6"
-        android:src="@drawable/icon_yellow" />
+        android:src="@drawable/icon_on" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -100,7 +100,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView7"
-        android:src="@drawable/icon_orange" />
+        android:src="@drawable/icon_off" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -124,6 +124,14 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView10"
+       android:src="@drawable/icon_elseif"/>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/imageView11"
         android:src="@drawable/icon_if_kokomade" />
 
     <ImageView
@@ -711,20 +719,11 @@
         android:text="@string/next" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/SaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/button1"
-        android:onClick="onClickStartButton"
-        android:text="Start" />
-
-    <Button
-        android:id="@+id/SaveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_above="@id/button1"
         android:onClick="onClickSaveButton"
         android:text="保存"/>
 

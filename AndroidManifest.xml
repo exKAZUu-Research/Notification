@@ -13,27 +13,42 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name="com.example.notification.MainActivity"
-            android:label="@string/app_name">
+            android:name=".Activity.TitleActivity"
+            android:label="TitleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name="com.example.notification.NextActivity"
+            android:name=".Activity.MainActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name=".Activity.SelectActivity"
+            android:label="SelectActivity"></activity>
+
+        <activity
+            android:name=".Activity.NextActivity"
             android:label="@string/title_activity_next"></activity>
 
         <activity
-            android:name="com.example.notification.ThirdActivity"
-            android:label="ThirdActivity">
+            android:name=".Activity.ThirdActivity"
+            android:label="ThirdActivity"></activity>
 
-        </activity>
+        <activity
+            android:name=".Activity.HelpActivity"
+            android:label="HelpActivity"></activity>
+
+        <activity
+            android:name=".Activity.SampleActivity"
+            android:label="SampleActivity"></activity>
 
         <service
-            android:name=".NotificationListener"
+            android:name=".function.NotificationListener"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
