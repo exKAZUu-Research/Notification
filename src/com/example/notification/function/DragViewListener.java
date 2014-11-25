@@ -136,49 +136,49 @@ public class DragViewListener implements OnTouchListener {
                 //アイコンに変更
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 9; j++) {
-                        if (program[i][j] == "Gmail") {
+                        if (program[i][j].equals("Gmail")) {
                             cells[i][j].setImageResource(R.drawable.icon_gmail);
-                        } else if (program[i][j] == "Calendar") {
+                        } else if (program[i][j].equals("Calendar")) {
                             cells[i][j].setImageResource(R.drawable.icon_calender);
-                        } else if (program[i][j] == "Twitter") {
+                        } else if (program[i][j].equals("Twitter")) {
                             cells[i][j].setImageResource(R.drawable.icon_twitter);
-                        } else if (program[i][j] == "Facebook") {
+                        } else if (program[i][j].equals("Facebook")) {
                             cells[i][j].setImageResource(R.drawable.icon_fb);
-                        } else if (program[i][j] == "for") {
+                        } else if (program[i][j].equals("for")) {
                             cells[i][j].setImageResource(R.drawable.icon_loop);
-                        } else if (program[i][j] == "forend") {
+                        } else if (program[i][j].equals("forend")) {
                             cells[i][j].setImageResource(R.drawable.icon_kokomade);
-                        } else if (program[i][j] == "ON") {
+                        } else if (program[i][j].equals("ON")) {
                             cells[i][j].setImageResource(R.drawable.icon_on);
-                        } else if (program[i][j] == "OFF") {
+                        } else if (program[i][j].equals("OFF")) {
                             cells[i][j].setImageResource(R.drawable.icon_off);
-                        } else if (program[i][j] == "if") {
+                        } else if (program[i][j].equals("if")) {
                             cells[i][j].setImageResource(R.drawable.icon_if);
-                        } else if (program[i][j] == "else") {
+                        } else if (program[i][j].equals("else")) {
                             cells[i][j].setImageResource(R.drawable.icon_else);
-                        } else if (program[i][j] == "elseif") {
+                        } else if (program[i][j].equals("elseif")) {
                             cells[i][j].setImageResource(R.drawable.icon_elseif);
-                        } else if (program[i][j] == "ifend") {
+                        } else if (program[i][j].equals("ifend")) {
                             cells[i][j].setImageResource(R.drawable.icon_if_kokomade);
-                        } else if (program[i][j] == "1") {
+                        } else if (program[i][j].equals("1")) {
                             cells[i][j].setImageResource(R.drawable.num1);
-                        } else if (program[i][j] == "2") {
+                        } else if (program[i][j].equals("2")) {
                             cells[i][j].setImageResource(R.drawable.num2);
-                        } else if (program[i][j] == "3") {
+                        } else if (program[i][j].equals("3")) {
                             cells[i][j].setImageResource(R.drawable.num3);
-                        } else if (program[i][j] == "4") {
+                        } else if (program[i][j].equals("4")) {
                             cells[i][j].setImageResource(R.drawable.num4);
-                        } else if (program[i][j] == "5") {
+                        } else if (program[i][j].equals("5")) {
                             cells[i][j].setImageResource(R.drawable.num5);
-                        } else if (program[i][j] == "6") {
+                        } else if (program[i][j].equals("6")) {
                             cells[i][j].setImageResource(R.drawable.num6);
-                        } else if (program[i][j] == "7") {
+                        } else if (program[i][j].equals("7")) {
                             cells[i][j].setImageResource(R.drawable.num7);
-                        } else if (program[i][j] == "8") {
+                        } else if (program[i][j].equals("8")) {
                             cells[i][j].setImageResource(R.drawable.num8);
-                        } else if (program[i][j] == "9") {
+                        } else if (program[i][j].equals("9")) {
                             cells[i][j].setImageResource(R.drawable.num9);
-                        } else if (program[i][j] == "0") {
+                        } else if (program[i][j].equals("0")) {
                             cells[i][j].setImageResource(R.drawable.num0);
                         } else {
                             cells[i][j].setImageResource(R.drawable.haikei_kuro);

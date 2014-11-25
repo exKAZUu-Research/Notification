@@ -101,15 +101,4 @@ public class SelectActivity extends Activity {
             }
         });
     }
-
-    public void onClickFileButton(View v) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickSampleButton(View v) {
-        Intent intent = new Intent(this, SampleActivity.class);
-        startActivity(intent);
-    }
-
 }

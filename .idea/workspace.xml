@@ -34,7 +34,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fc03fe3-91ed-4fbc-b144-a1d43c009019" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_select.xml" afterPath="$PROJECT_DIR$/res/layout/activity_select.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Notification.iws" />
@@ -58,28 +61,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SelectActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SelectActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1717">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="1513">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58391607" vertical-offset="3879" max-vertical-offset="5695">
-              <caret line="238" column="50" selection-start-line="238" selection-start-column="50" selection-end-line="238" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3301" max-vertical-offset="6290">
+              <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#927#935#0" expanded="true" />
                 <element signature="e#981#989#0" expanded="true" />
                 <element signature="e#1035#1043#0" expanded="true" />
                 <element signature="e#1089#1097#0" expanded="true" />
-                <element signature="e#9726#9734#0" expanded="true" />
+                <element signature="e#10654#10662#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +91,8 @@
       <file leaf-file-name="DragViewListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="3723">
-              <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
+              <caret line="205" column="47" selection-start-line="205" selection-start-column="47" selection-end-line="205" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -127,12 +130,10 @@
         <option value="$PROJECT_DIR$/src/com/example/notification/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_third.xml" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/ThirdActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/TitleActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/function/ViewDto.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_select.xml" />
         <option value="$PROJECT_DIR$/src/com/example/notification/function/TempDataUtil.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_sample.xml" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SampleActivity.java" />
@@ -143,8 +144,10 @@
         <option value="$PROJECT_DIR$/res/layout/activity_splite.xml" />
         <option value="$PROJECT_DIR$/res/layout/listrow_sqplite.xml" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SQLiteActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_select.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
       </list>
     </option>
   </component>
@@ -253,6 +256,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Notification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Notification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,6 +510,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20937042" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -509,7 +531,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20937042" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -533,7 +554,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -547,7 +568,7 @@
             <element signature="e#981#989#0" expanded="true" />
             <element signature="e#1035#1043#0" expanded="true" />
             <element signature="e#1089#1097#0" expanded="true" />
-            <element signature="e#9726#9734#0" expanded="true" />
+            <element signature="e#10654#10662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,7 +591,7 @@
             <element signature="e#981#989#0" expanded="true" />
             <element signature="e#1035#1043#0" expanded="true" />
             <element signature="e#1089#1097#0" expanded="true" />
-            <element signature="e#9726#9734#0" expanded="true" />
+            <element signature="e#10654#10662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,7 +677,7 @@
             <element signature="e#981#989#0" expanded="true" />
             <element signature="e#1035#1043#0" expanded="true" />
             <element signature="e#1089#1097#0" expanded="true" />
-            <element signature="e#9726#9734#0" expanded="true" />
+            <element signature="e#10654#10662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -707,7 +728,7 @@
             <element signature="e#981#989#0" expanded="true" />
             <element signature="e#1035#1043#0" expanded="true" />
             <element signature="e#1089#1097#0" expanded="true" />
-            <element signature="e#9726#9734#0" expanded="true" />
+            <element signature="e#10654#10662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -939,24 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SampleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23342176" vertical-offset="1646" max-vertical-offset="2023">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_select.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14697406" vertical-offset="0" max-vertical-offset="595">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/sample1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="377">
@@ -971,34 +974,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SampleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3097" max-vertical-offset="3723">
-          <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+        <state vertical-scroll-proportion="6.0034966" vertical-offset="0" max-vertical-offset="1904">
+          <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_select.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="2057">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.53125" vertical-offset="0" max-vertical-offset="323">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
+          <caret line="205" column="47" selection-start-line="205" selection-start-column="47" selection-end-line="205" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58391607" vertical-offset="3879" max-vertical-offset="5695">
-          <caret line="238" column="50" selection-start-line="238" selection-start-column="50" selection-end-line="238" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3301" max-vertical-offset="6290">
+          <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#927#935#0" expanded="true" />
             <element signature="e#981#989#0" expanded="true" />
             <element signature="e#1035#1043#0" expanded="true" />
             <element signature="e#1089#1097#0" expanded="true" />
-            <element signature="e#9726#9734#0" expanded="true" />
+            <element signature="e#10654#10662#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="1513">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
