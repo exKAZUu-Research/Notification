@@ -762,4 +762,5 @@
         android:onClick="onClickFacebookButton"
         android:text="Facebook"/>
 
+    <!--android:drawableLeft="@drawable/icon_fb"-->
 </RelativeLayout>

@@ -1,6 +1,10 @@
 package com.example.notification.Activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -80,6 +84,8 @@ public class SelectActivity extends Activity {
 
         ListView lv = (ListView) findViewById(R.id.list);
         final String finalNumber = number;      //いくつのプログラムが保存されているか
+
+        //リストの項目を押したときの処理
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -100,5 +106,38 @@ public class SelectActivity extends Activity {
                 }
             }
         });
+
+        //リストの項目を長押ししたときの処理
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialogFragment dialog = new AlertDialogFragment();
+                dialog.show(getFragmentManager(), "dialog");
+                return false;
+            }
+        });
+    }
+
+    //長押ししたときに表示されるアラートダイアログの処理
+    public static class AlertDialogFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle("削除");
+            builder.setMessage("このプログラムを削除しますか？");
+
+            builder.setPositiveButton("はい", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int id) {
+                }
+            });
+
+            builder.setNegativeButton("いいえ", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int id) {
+                }
+            });
+            return builder.create();
+        }
     }
 }
