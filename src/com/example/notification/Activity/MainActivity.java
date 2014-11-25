@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
                     e.printStackTrace();
                 }
             } else {
-                InputStream in = openFileInput("Test1.text");
+                InputStream in = openFileInput(num + ".text");
                 //InputStream in = openFileInput(num + ".text");
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(in, "UTF-8"));
@@ -85,17 +85,13 @@ public class MainActivity extends Activity {
                 for (int j = 0; j < 9; j++) {
                     for (int i = 0; i < 3; i++) {
                         s = reader.readLine();
-                        program[i][j] = s;
+                        if (s.equals("")) {
+                            program[i][j] = "";
+                        } else {
+                            program[i][j] = s;
+                        }
                     }
                 }
-                /*while ((s = reader.readLine()) != "") {
-                    program[i][j] = s;
-                    i++;
-                    j++;
-                    if (i == 3) {
-                        i = 0;
-                    }
-                }*/
                 reader.close();
             }
         } catch (IOException e) {
@@ -239,7 +235,9 @@ public class MainActivity extends Activity {
 
         //ファイルにプログラムを保存
         String message = "";
-        String fileName = "Test1.text";
+        Intent intent = getIntent();
+        String num = intent.getStringExtra("num");
+        String fileName = num + ".text";
         String inputText = "";
         for (int j = 0; j < 9; j++) {
             for (int i = 0; i < 3; i++) {

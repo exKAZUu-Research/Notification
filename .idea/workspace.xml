@@ -34,66 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fc03fe3-91ed-4fbc-b144-a1d43c009019" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/SampleActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/function/TempDataUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/ThirdActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/TitleActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/notification/function/ViewDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_help.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_sample.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_select.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_title.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/sample1.txt" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num0.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num6.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num7.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num8.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\res\drawable-hdpi\num9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\ThirdActivity.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\DragViewListener.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\ImageGetterImpl.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/ImageGetterImpl.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\NextActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/NextActivity.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\NotificationListener.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/NotificationListener.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\Parser.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/Parser.java" />
-      <change type="MOVED" beforePath="C:\Users\hamachi\AndroidstudioProjects\Notification\src\com\example\notification\ScrollViewTest.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/ScrollViewTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_else.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_else.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_if.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_if.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_if_kokomade.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_if_kokomade.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_kokomade.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_kokomade.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_loop.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_loop.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num7.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num7.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_third.xml" afterPath="$PROJECT_DIR$/res/layout/activity_third.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Notification.iws" />
@@ -120,7 +61,7 @@
       <file leaf-file-name="SelectActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2057">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1717">
               <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
@@ -130,10 +71,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5627178" vertical-offset="816" max-vertical-offset="5355">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.58391607" vertical-offset="3879" max-vertical-offset="5695">
+              <caret line="238" column="50" selection-start-line="238" selection-start-column="50" selection-end-line="238" selection-end-column="50" />
               <folding>
-                <element signature="e#9824#9832#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#927#935#0" expanded="true" />
+                <element signature="e#981#989#0" expanded="true" />
+                <element signature="e#1035#1043#0" expanded="true" />
+                <element signature="e#1089#1097#0" expanded="true" />
+                <element signature="e#9726#9734#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,7 +88,7 @@
       <file leaf-file-name="DragViewListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3383" max-vertical-offset="3842">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="3723">
               <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
               <folding />
             </state>
@@ -234,7 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,6 +274,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,6 +338,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -417,19 +376,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -537,7 +483,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,7 +497,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47603306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561985" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47603306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -565,7 +512,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20937042" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561985" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -587,7 +533,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -596,7 +542,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3845" max-vertical-offset="5270">
           <caret line="236" column="62" selection-start-line="236" selection-start-column="62" selection-end-line="236" selection-end-column="62" />
           <folding>
-            <element signature="e#9824#9832#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#927#935#0" expanded="true" />
+            <element signature="e#981#989#0" expanded="true" />
+            <element signature="e#1035#1043#0" expanded="true" />
+            <element signature="e#1089#1097#0" expanded="true" />
+            <element signature="e#9726#9734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,7 +565,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5168">
           <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
-            <element signature="e#9824#9832#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#927#935#0" expanded="true" />
+            <element signature="e#981#989#0" expanded="true" />
+            <element signature="e#1035#1043#0" expanded="true" />
+            <element signature="e#1089#1097#0" expanded="true" />
+            <element signature="e#9726#9734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -669,25 +625,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_next.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="12206" max-vertical-offset="12376">
           <caret line="718" column="44" selection-start-line="718" selection-start-column="44" selection-end-line="718" selection-end-column="44" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
@@ -695,7 +651,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2193">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#9824#9832#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#927#935#0" expanded="true" />
+            <element signature="e#981#989#0" expanded="true" />
+            <element signature="e#1035#1043#0" expanded="true" />
+            <element signature="e#1089#1097#0" expanded="true" />
+            <element signature="e#9726#9734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,25 +676,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_next.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12376">
           <caret line="718" column="44" selection-start-line="718" selection-start-column="44" selection-end-line="718" selection-end-column="44" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
@@ -741,7 +702,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1666">
           <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding>
-            <element signature="e#9824#9832#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#927#935#0" expanded="true" />
+            <element signature="e#981#989#0" expanded="true" />
+            <element signature="e#1035#1043#0" expanded="true" />
+            <element signature="e#1089#1097#0" expanded="true" />
+            <element signature="e#9726#9734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -761,25 +727,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_next.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
           <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7064" max-vertical-offset="7905">
           <caret line="427" column="44" selection-start-line="427" selection-start-column="44" selection-end-line="427" selection-end-column="44" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/os/Handler.class">
@@ -839,14 +805,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_next.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1411">
           <caret line="46" column="46" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="46" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/NextActivity.java">
@@ -857,14 +823,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_help.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java">
@@ -889,36 +855,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_third.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.0219436" vertical-offset="0" max-vertical-offset="17629">
           <caret line="113" column="34" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_title.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_title.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="629">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="12" selection-end-column="29" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="12740" max-vertical-offset="13090">
           <caret line="755" column="1" selection-start-line="755" selection-start-column="1" selection-end-line="762" selection-end-column="33" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/TitleActivity.java">
@@ -936,14 +902,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_sample.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.1" vertical-offset="0" max-vertical-offset="1717">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -981,14 +947,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_select.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14697406" vertical-offset="0" max-vertical-offset="595">
           <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/sample1.txt">
@@ -1023,10 +989,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5627178" vertical-offset="816" max-vertical-offset="5355">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.58391607" vertical-offset="3879" max-vertical-offset="5695">
+          <caret line="238" column="50" selection-start-line="238" selection-start-column="50" selection-end-line="238" selection-end-column="50" />
           <folding>
-            <element signature="e#9824#9832#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#927#935#0" expanded="true" />
+            <element signature="e#981#989#0" expanded="true" />
+            <element signature="e#1035#1043#0" expanded="true" />
+            <element signature="e#1089#1097#0" expanded="true" />
+            <element signature="e#9726#9734#0" expanded="true" />
           </folding>
         </state>
       </provider>
