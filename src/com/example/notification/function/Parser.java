@@ -97,6 +97,7 @@ public class Parser {
             str = oldcommands.get(pointer);
             pointer++;
         }
+        pointer--;
     }
 
     public void ifStatement() {
