@@ -24,7 +24,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-
 public class MainActivity extends Activity {
 
     String[][] program = new String[3][9];
@@ -51,9 +50,9 @@ public class MainActivity extends Activity {
         //ファイルから読み込む
         try {
             Intent intent = getIntent();
-            String num = intent.getStringExtra("num");
-            System.out.println(num);
-            if (num.equals("new")) {
+            String name = intent.getStringExtra("name");
+            System.out.println(name);
+            if (name.equals("new")) {
                 Intent intent2 = getIntent();
                 String number = intent2.getStringExtra("number");
                 number = String.valueOf(Integer.parseInt(number) + 1);
@@ -76,8 +75,7 @@ public class MainActivity extends Activity {
                     e.printStackTrace();
                 }
             } else {
-                InputStream in = openFileInput(num + ".text");
-                //InputStream in = openFileInput(num + ".text");
+                InputStream in = openFileInput(name + ".text");
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(in, "UTF-8"));
                 String s;
@@ -98,7 +96,7 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
 
-
+        //textviewに表示
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(program[0][0] + program[1][0] + program[2][0] + "\n"
                 + program[0][1] + program[1][1] + program[2][1] + "\n"
@@ -136,12 +134,7 @@ public class MainActivity extends Activity {
             }
         }
 
-        if (program[0][0].equals("ON")) {
-            System.out.println("同じ");
-        } else {
-            System.out.println("違う");
-        }
-
+        //保存されていたものをアイコンに戻す用
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
                 if (program[i][j].equals("Gmail")) {
@@ -217,28 +210,18 @@ public class MainActivity extends Activity {
         int[][] iconsId = new int[2][12];
         ImageView[][] dragView = new ImageView[2][12];
         DragViewListener[][] listener = new DragViewListener[2][12];
-        for (
-                int i = 0;
-                i < 12; i++)
-
-        {
+        for (int i = 0; i < 12; i++) {
             iconsId[0][i] = this.getResources().getIdentifier("imageView" + (i + 1), "id", this.getPackageName());
             dragView[0][i] = (ImageView) findViewById(iconsId[0][i]);
             listener[0][i] = new DragViewListener(dragView[0][i], cells, program, text, flag, cellsId, canwrite);
             dragView[0][i].setOnTouchListener(listener[0][i]);
         }
-
-        for (
-                int i = 0;
-                i < 10; i++)
-
-        {
+        for (int i = 0; i < 10; i++) {
             iconsId[1][i] = this.getResources().getIdentifier("imageView0" + i, "id", this.getPackageName());
             dragView[1][i] = (ImageView) findViewById(iconsId[1][i]);
             listener[1][i] = new DragViewListener(dragView[1][i], cells, program, text, flag, cellsId, canwrite);
             dragView[1][i].setOnTouchListener(listener[1][i]);
         }
-
     }
 
     @Override
@@ -246,7 +229,6 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     String html = "";
 
     //nextボタンの動作
@@ -255,6 +237,7 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    //保存ボタン
     public void onClickSaveButton(View v) {
         ArrayList<String> oldcommands = new ArrayList<String>();
         for (int j = 0; j < 9; j++) {
@@ -266,34 +249,37 @@ public class MainActivity extends Activity {
         }
         Parser parser = new Parser(oldcommands, commands, Gcom, Ccom, Tcom, Fcom);
         parser.main();
-        Toast.makeText(this, "保存しました。", Toast.LENGTH_SHORT).show();
+        if(!parser.isErr()) {
+            Toast.makeText(this, "保存しました。", Toast.LENGTH_SHORT).show();
 
-        //ファイルにプログラムを保存
-        String message = "";
-        Intent intent = getIntent();
-        String num = intent.getStringExtra("num");
-        String fileName = num + ".text";
-        String inputText = "";
-        for (int j = 0; j < 9; j++) {
-            for (int i = 0; i < 3; i++) {
-                inputText += program[i][j];
-                inputText += "\n";
+            //ファイルにプログラムを保存
+            String message = "";
+            Intent intent = getIntent();
+            String name = intent.getStringExtra("name");
+            String fileName = name + ".text";
+            String inputText = "";
+            for (int j = 0; j < 9; j++) {
+                for (int i = 0; i < 3; i++) {
+                    inputText += program[i][j];
+                    inputText += "\n";
+                }
             }
-        }
-        try {
-            FileOutputStream outStream = openFileOutput(fileName, MODE_PRIVATE);
-            OutputStreamWriter writer = new OutputStreamWriter(outStream);
-            writer.write(inputText);
-            writer.flush();
-            writer.close();
-
-            message = "File saved.";
-        } catch (FileNotFoundException e) {
-            message = e.getMessage();
-            e.printStackTrace();
-        } catch (IOException e) {
-            message = e.getMessage();
-            e.printStackTrace();
+            try {
+                FileOutputStream outStream = openFileOutput(fileName, MODE_PRIVATE);
+                OutputStreamWriter writer = new OutputStreamWriter(outStream);
+                writer.write(inputText);
+                writer.flush();
+                writer.close();
+                message = "File saved.";
+            } catch (FileNotFoundException e) {
+                message = e.getMessage();
+                e.printStackTrace();
+            } catch (IOException e) {
+                message = e.getMessage();
+                e.printStackTrace();
+            }
+        }else{
+            Toast.makeText(this, "文法がどこか違うよ", Toast.LENGTH_SHORT).show();
         }
     }
 

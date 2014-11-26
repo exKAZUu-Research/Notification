@@ -6,13 +6,15 @@ import java.util.Scanner;
 public class Parser {
 
     static Scanner sc;
-    private static String[] commands = new String[4]; // 状態別のコマンドが格納される
-    private static ArrayList<String> oldcommands = new ArrayList<String>(); // 最初に書かれたコマンドがはいっている
-    private static int pointer; // ポインター(どこをよんでいるかわかるように)
-    private static ArrayList<String> Gcom = new ArrayList<String>();    //音楽を鳴らすときにわかりやすくするためのコマンド
-    private static ArrayList<String> Ccom = new ArrayList<String>();
-    private static ArrayList<String> Tcom = new ArrayList<String>();
-    private static ArrayList<String> Fcom = new ArrayList<String>();
+    private String[] commands = new String[4]; // 状態別のコマンドが格納される
+    private ArrayList<String> oldcommands = new ArrayList<String>(); // 最初に書かれたコマンドがはいっている
+    private int pointer; // ポインター(どこをよんでいるかわかるように)
+    private ArrayList<String> Gcom = new ArrayList<String>();    //音楽を鳴らすときにわかりやすくするためのコマンド
+    private ArrayList<String> Ccom = new ArrayList<String>();
+    private ArrayList<String> Tcom = new ArrayList<String>();
+    private ArrayList<String> Fcom = new ArrayList<String>();
+
+    private boolean err;
 
     public Parser(ArrayList<String> oldcommands, String[] commands, ArrayList<String> Gcom, ArrayList<String> Ccom, ArrayList<String> Tcom, ArrayList<String> Fcom) {
         this.oldcommands = oldcommands;
@@ -21,9 +23,10 @@ public class Parser {
         this.Ccom = Ccom;
         this.Tcom = Tcom;
         this.Fcom = Fcom;
+        this.err = false;
     }
 
-    public static void main() {
+    public void main() {
         pointer = 0;
 
         for (int i = 0; i < 4; i++) {
@@ -44,37 +47,30 @@ public class Parser {
             commands[i] += "!";
             newParser2(commands[i], i);
         }
-
-        System.out.println(Gcom.get(0));
     }
 
     /**
      * とりあえず全部のコマンドを読み込む
      */
-    public static void readCommand() { // とりあえず全部のコマンドを読み込む
+    public void readCommand() { // とりあえず全部のコマンドを読み込む
         while (sc.hasNext()) {
             oldcommands.add(sc.next());
         }
     }
 
-    public static void program(int mask) {
+    public void program(int mask) {
         while (pointer < oldcommands.size()) {
             command(mask);
         }
     }
 
-    public static void command(int mask) {
+    public void command(int mask) {
         String str = oldcommands.get(pointer);
         pointer++;
 
         if (str.equals("ON") || str.equals("OFF") || str.equals("fadeIn")
                 || str.equals("fadeOut")) {
-            for (int i = 0; i < 4; i++) {
-                int j = 1 << i;
-                if ((j & mask) == j) {
-                    commands[i] += str;
-                }
-            }
+            pointer--;
             LED_new(mask);
         } else if (str.equals("if")) {
             ifStatement();
@@ -82,68 +78,40 @@ public class Parser {
             forStatement(mask);
         } else { // エラー処理
             System.err.println("コンパイルエラー");
+            this.err = true;
         }
     }
 
-    public static void LED_new(int mask) {
+    public void LED_new(int mask) {
 
         String str = oldcommands.get(pointer);
-        while (str.equals("ON") || str.equals("OFF") || str.equals("fadeIn")
-                || str.equals("fadeOut")) {
+        pointer++;
+        while ((str.equals("ON") || str.equals("OFF") || str.equals("fadeIn")
+                || str.equals("fadeOut")) && pointer < oldcommands.size()) {
             for (int i = 0; i < 4; i++) {
                 int j = 1 << i; // 1をiだけ左にbitシフト
                 if ((j & mask) == j) { // bitごとのAND演算
                     commands[i] += str;
                 }
             }
-            pointer++;
-            if (pointer == oldcommands.size()) {
-                return;
-            }
             str = oldcommands.get(pointer);
+            pointer++;
         }
     }
 
-    public static void LED(int mask) {
+    public void ifStatement() {
 
-        int time = number();
-
-        for (int i = 0; i < 4; i++) {
-            int j = 1 << i; // 1をiだけ左にbitシフト
-            if ((j & mask) == j) { // bitごとのAND演算
-                commands[i] += "ON" + time;
-            }
-        }
-
-        String str = oldcommands.get(pointer);
-        pointer++;
-
-        if (!str.equals("OFF")) { // エラー処理
-            System.err.println("OFFがないよ");
-            return;
-        }
-
-        time = number();
-
-        for (int i = 0; i < 4; i++) {
-            int j = 1 << i; // 1をiだけ左にbitシフト
-            if ((j & mask) == j) { // bitごとのAND演算
-                commands[i] += "OFF" + time;
-            }
-        }
-
-    }
-
-    public static void ifStatement() {
 
         String cond = condition();
         int flag = 15;
 
         if (cond == null) {
             System.err.println("条件がないよ");
+            this.err = true;
             return;
         }
         while (!oldcommands.get(pointer).equals("ifend")) {
+
             if (cond.equals("Gmail")) {
                 command(1);
                 flag -= 1;
@@ -158,6 +126,11 @@ public class Parser {
                 flag -= 8;
             }
 
+            if (pointer >= oldcommands.size()) {
+                System.err.println("ifのendがないよ");
+                this.err = true;
+                return;
+            }
             if (oldcommands.get(pointer).equals("elseif")) {
                 pointer++;
                 cond = condition();
@@ -165,25 +138,27 @@ public class Parser {
                 pointer++;
                 command(flag);
 
-                while (!oldcommands.get(pointer).equals("ifend")) {
-                    if (oldcommands.get(pointer).equals("elseif")) {
-                        System.err.println("else の後に　elseif　はだめだよ");
-                        return;
-                    }
-                    command(flag);
+                if (!oldcommands.get(pointer).equals("ifend")) {
+                    System.err.println("elseの後にはifendが必要です");
+                    this.err = true;
+                    return;
                 }
+            } else if (!oldcommands.get(pointer).equals("ifend")) {
+                System.err.println("ifのendがないよ");
+                this.err = true;
+                return;
             }
         }
-
-        String str = oldcommands.get(pointer);
         pointer++;
-        if (!str.equals("ifend")) {
-            System.err.println("ifのendがないよ");
-        }
     }
 
-    public static void forStatement(int mask) {
+    public void forStatement(int mask) {
 
+        if (!Character.isDigit(oldcommands.get(pointer).charAt(0))) {
+            System.err.println("forの後には数字をいれてね");
+            this.err = true;
+            return;
+        }
         int num = number();
         int tpointer = pointer;
         for (int i = 0; i < num; i++) {
@@ -191,20 +166,26 @@ public class Parser {
             command(mask);
         }
 
+        if (pointer >= oldcommands.size()) {
+            System.err.println("forのendがないよ");
+            this.err = true;
+            return;
+        }
         String str = oldcommands.get(pointer);
         pointer++;
         if (!str.equals("forend")) {
-            System.err.println("forのendがないよ");
+            System.err.println("forのendがないよpart2");
+            this.err = true;
         }
     }
 
-    public static int number() {
+    public int number() {
         String str = oldcommands.get(pointer);
         pointer++;
         return Integer.parseInt(str);
     }
 
-    public static String condition() {
+    public String condition() {
         String str = oldcommands.get(pointer);
         pointer++;
 
@@ -216,7 +197,7 @@ public class Parser {
         return str;
     }
 
-    public static void newParser(String com, int num) {     //音楽をならすのをわかりやすくするための解析
+    public void newParser(String com, int num) {     //音楽をならすのをわかりやすくするための解析
         sc = new Scanner(com);
         ArrayList<String> newcom = new ArrayList<String>();
         String str = sc.next();
@@ -248,7 +229,7 @@ public class Parser {
         }
     }
 
-    public static void newParser2(String com, int num) {
+    public void newParser2(String com, int num) {
         sc = new Scanner(com);
         ArrayList<String> newcom = new ArrayList<String>();
         String str = sc.next();
@@ -286,5 +267,10 @@ public class Parser {
                 Fcom.add(newcom.get(i));
             }
         }
+    }
+
+    //コンパイルエラーかどうか
+    public boolean isErr() {
+        return err;
     }
 }

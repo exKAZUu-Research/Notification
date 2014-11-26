@@ -10,10 +10,6 @@
     <string name="next">Next</string>
     <string name="finish">Finish</string>
 
-    <!-- Data:SQLite -->
-    <string name="title_activity_sqlite">SQLite を使う</string>
-    <string name="btn_sqlite_save">メモを追加</string>
-    <string name="btn_sqlite_delete">終了した TODO を削除</string>
-    <string name="textv_sqlite">TextView</string>
+    <string name="makefile">名前が重複しています</string>
 
 </resources>
