@@ -124,7 +124,7 @@
         android:layout_height="61dip"
         android:layout_alignParentRight="true"
         android:layout_below="@id/imageView10"
-       android:src="@drawable/icon_elseif"/>
+        android:src="@drawable/icon_elseif" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -213,10 +213,8 @@
         android:layout_below="@id/imageView09"
         android:src="@drawable/num0" />
 
-
     <!-- 背景たち -->
     <!-- 1行目 -->
-
     <ImageView
         android:id="@+id/image0_0"
         android:layout_width="61dip"
@@ -241,7 +239,6 @@
         android:src="@drawable/haikei_kuro" />
 
     <!-- 2行目 -->
-
     <ImageView
         android:id="@+id/image0_1"
         android:layout_width="61dip"
@@ -269,7 +266,6 @@
         android:src="@drawable/haikei_kuro" />
 
     <!-- 3行目 -->
-
     <ImageView
         android:id="@+id/image0_2"
         android:layout_width="61dip"
@@ -295,8 +291,8 @@
         android:layout_toRightOf="@id/image1_2"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 4行目 -->
 
+    <!-- 4行目 -->
     <ImageView
         android:id="@+id/image0_3"
         android:layout_width="61dip"
@@ -322,8 +318,8 @@
         android:layout_toRightOf="@id/image1_3"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 5行目 -->
 
+    <!-- 5行目 -->
     <ImageView
         android:id="@+id/image0_4"
         android:layout_width="61dip"
@@ -349,8 +345,8 @@
         android:layout_toRightOf="@id/image1_4"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 6行目 -->
 
+    <!-- 6行目 -->
     <ImageView
         android:id="@+id/image0_5"
         android:layout_width="61dip"
@@ -376,8 +372,8 @@
         android:layout_toRightOf="@id/image1_5"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 7行目 -->
 
+    <!-- 7行目 -->
     <ImageView
         android:id="@+id/image0_6"
         android:layout_width="61dip"
@@ -403,8 +399,8 @@
         android:layout_toRightOf="@id/image1_6"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 8行目 -->
 
+    <!-- 8行目 -->
     <ImageView
         android:id="@+id/image0_7"
         android:layout_width="61dip"
@@ -430,8 +426,8 @@
         android:layout_toRightOf="@id/image1_7"
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
-    <!-- 9行目 -->
 
+    <!-- 9行目 -->
     <ImageView
         android:id="@+id/image0_8"
         android:layout_width="61dip"
@@ -458,6 +454,86 @@
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
 
+    <!-- 10行目 -->
+    <ImageView
+        android:id="@+id/image0_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_8"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image1_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_8"
+        android:layout_toRightOf="@id/image0_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image2_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_8"
+        android:layout_toRightOf="@id/image1_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <!-- 11行目 -->
+    <ImageView
+        android:id="@+id/image0_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image1_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_9"
+        android:layout_toRightOf="@id/image0_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image2_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_9"
+        android:layout_toRightOf="@id/image1_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <!-- 12行目 -->
+    <ImageView
+        android:id="@+id/image0_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image1_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_10"
+        android:layout_toRightOf="@id/image0_11"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/image2_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_10"
+        android:layout_toRightOf="@id/image1_11"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
     <!-- 記述可能な位置を教える -->
     <!-- 1行目 -->
 
@@ -701,6 +777,91 @@
         android:scaleType="fitStart"
         android:src="@drawable/haikei_kuro" />
 
+    <!-- 10行目 -->
+
+    <ImageView
+        android:id="@+id/canwrite0_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_8"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei" />
+
+    <ImageView
+        android:id="@+id/canwrite1_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_8"
+        android:layout_toRightOf="@id/image0_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/canwrite2_9"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_8"
+        android:layout_toRightOf="@id/image1_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <!-- 11行目 -->
+
+    <ImageView
+        android:id="@+id/canwrite0_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_9"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei" />
+
+    <ImageView
+        android:id="@+id/canwrite1_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_9"
+        android:layout_toRightOf="@id/image0_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/canwrite2_10"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_9"
+        android:layout_toRightOf="@id/image1_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <!-- 12行目 -->
+
+    <ImageView
+        android:id="@+id/canwrite0_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image0_10"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei" />
+
+    <ImageView
+        android:id="@+id/canwrite1_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image1_10"
+        android:layout_toRightOf="@id/image0_11"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/canwrite2_11"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/image2_10"
+        android:layout_toRightOf="@id/image1_11"
+        android:scaleType="fitStart"
+        android:src="@drawable/haikei_kuro" />
+
+    <!-- ゴミ箱 -->
     <ImageView
         android:id="@+id/dustBox"
         android:layout_width="122dip"
@@ -725,15 +886,16 @@
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/button1"
         android:onClick="onClickSaveButton"
-        android:text="保存"/>
+        android:text="保存" />
 
+    <!--　確認ボタン類　-->
     <Button
         android:id="@+id/Gmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:onClick="onClickGmailButton"
-        android:text="Gmail"/>
+        android:text="Gmail" />
 
     <Button
         android:id="@+id/Calendar"
@@ -742,7 +904,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/Gmail"
         android:onClick="onClickCalendarButton"
-        android:text="Calendar"/>
+        android:text="Calendar" />
 
     <Button
         android:id="@+id/Twitter"
@@ -751,7 +913,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/Calendar"
         android:onClick="onClickTwitterButton"
-        android:text="Twitter"/>
+        android:text="Twitter" />
 
     <Button
         android:id="@+id/Faebook"
@@ -760,7 +922,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/Twitter"
         android:onClick="onClickFacebookButton"
-        android:text="Facebook"/>
+        android:text="Facebook" />
 
     <!--android:drawableLeft="@drawable/icon_fb"-->
 </RelativeLayout>

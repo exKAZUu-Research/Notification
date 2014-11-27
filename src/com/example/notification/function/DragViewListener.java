@@ -48,7 +48,7 @@ public class DragViewListener implements OnTouchListener {
                         + dragView.getHeight());
                 break;
             case MotionEvent.ACTION_UP:
-                if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 8) {
+                if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 11) {
                     if (view.getId() == R.id.imageView1) {
                         program[x_index][y_index] = "Gmail";
                     } else if (view.getId() == R.id.imageView2) {
@@ -95,7 +95,7 @@ public class DragViewListener implements OnTouchListener {
                         program[x_index][y_index] = "0";
                     } else {
                         for (int i = 0; i < 3; i++) {
-                            for (int j = 0; j < 9; j++) {
+                            for (int j = 0; j < 12; j++) {
                                 if (view.getId() == cellsId[i][j]) {
                                     if (program[i][j] != "") {
                                         if (x_index == i && y_index == j) {
@@ -123,7 +123,7 @@ public class DragViewListener implements OnTouchListener {
                     //初期状態に戻しておきたい
                 }
 
-                for (int j = 0; j < 9; j++) {
+                for (int j = 0; j < 12; j++) {
                     for (int count = 0; count < 2; count++) {
                         for (int i = 0; i < 2; i++) {
                             if (program[i][j] == "") {
@@ -135,7 +135,7 @@ public class DragViewListener implements OnTouchListener {
                 }
                 //アイコンに変更
                 for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 9; j++) {
+                    for (int j = 0; j < 12; j++) {
                         if (program[i][j].equals("Gmail")) {
                             cells[i][j].setImageResource(R.drawable.icon_gmail);
                         } else if (program[i][j].equals("Calendar")) {
@@ -187,7 +187,7 @@ public class DragViewListener implements OnTouchListener {
                 }
 
                 //次の入力場所の表示
-                for (int j = 0; j < 9; j++) {
+                for (int j = 0; j < 12; j++) {
                     int flag = 0;
                     for (int i = 0; i < 3; i++) {
                         if (program[i][j] == "") {
@@ -211,7 +211,10 @@ public class DragViewListener implements OnTouchListener {
                         + program[0][5] + program[1][5] + program[2][5] + "\n"
                         + program[0][6] + program[1][6] + program[2][6] + "\n"
                         + program[0][7] + program[1][7] + program[2][7] + "\n"
-                        + program[0][8] + program[1][8] + program[2][8]);
+                        + program[0][8] + program[1][8] + program[2][8] + "\n"
+                        + program[0][9] + program[1][9] + program[2][9] + "\n"
+                        + program[0][10] + program[1][10] + program[2][10] + "\n"
+                        + program[0][11] + program[1][11] + program[2][11]);
         }
 
         oldx = x;

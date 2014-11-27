@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-    String[][] program = new String[3][9];
+    String[][] program = new String[3][12];
     String[] commands = new String[4];
     String[][] newcoms;
     ArrayList<String> Gcom = new ArrayList<String>();
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 
         // 右側のテキストたち
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 12; i++) {
             for (int j = 0; j < 3; j++) {
                 program[j][i] = "";
             }
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
                         new BufferedReader(new InputStreamReader(in, "UTF-8"));
                 String s;
 
-                for (int j = 0; j < 9; j++) {
+                for (int j = 0; j < 12; j++) {
                     for (int i = 0; i < 3; i++) {
                         s = reader.readLine();
                         if (s.equals("")) {
@@ -106,26 +106,29 @@ public class MainActivity extends Activity {
                 + program[0][5] + program[1][5] + program[2][5] + "\n"
                 + program[0][6] + program[1][6] + program[2][6] + "\n"
                 + program[0][7] + program[1][7] + program[2][7] + "\n"
-                + program[0][8] + program[1][8] + program[2][8]);
+                + program[0][8] + program[1][8] + program[2][8] + "\n"
+                + program[0][9] + program[1][9] + program[2][9] + "\n"
+                + program[0][10] + program[1][10] + program[2][10] + "\n"
+                + program[0][11] + program[1][11] + program[2][11]);
 
         //記述可能部分
-        ImageView[][] canwrite = new ImageView[3][9];
-        int[][] resc = new int[3][9];
+        ImageView[][] canwrite = new ImageView[3][12];
+        int[][] resc = new int[3][12];
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j < 12; j++) {
                 resc[i][j] = this.getResources().getIdentifier("canwrite" + i + "_" + j, "id", this.getPackageName());
                 canwrite[i][j] = (ImageView) findViewById(resc[i][j]);
             }
         }
 
         // 背景たち
-        int[][] cellsId = new int[3][9];
-        ImageView[][] cells = new ImageView[3][9];
-        DragViewListener[][] backgroundlistener = new DragViewListener[3][9];
-        int[][] flag = new int[3][9];
+        int[][] cellsId = new int[3][12];
+        ImageView[][] cells = new ImageView[3][12];
+        DragViewListener[][] backgroundlistener = new DragViewListener[3][12];
+        int[][] flag = new int[3][12];
 
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j < 12; j++) {
                 flag[i][j] = 0;
                 cellsId[i][j] = this.getResources().getIdentifier("image" + i + "_" + j, "id", this.getPackageName());
                 cells[i][j] = (ImageView) findViewById(cellsId[i][j]);
@@ -136,7 +139,7 @@ public class MainActivity extends Activity {
 
         //保存されていたものをアイコンに戻す用
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j < 12; j++) {
                 if (program[i][j].equals("Gmail")) {
                     cells[i][j].setImageResource(R.drawable.icon_gmail);
                 } else if (program[i][j].equals("Calendar")) {
@@ -188,7 +191,7 @@ public class MainActivity extends Activity {
         }
 
         //次の入力場所の表示
-        for (int j = 0; j < 9; j++) {
+        for (int j = 0; j < 12; j++) {
             int f = 0;
             for (int i = 0; i < 3; i++) {
                 if (program[i][j] == "") {
@@ -229,6 +232,7 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     String html = "";
 
     //nextボタンの動作
@@ -240,7 +244,7 @@ public class MainActivity extends Activity {
     //保存ボタン
     public void onClickSaveButton(View v) {
         ArrayList<String> oldcommands = new ArrayList<String>();
-        for (int j = 0; j < 9; j++) {
+        for (int j = 0; j < 12; j++) {
             for (int i = 0; i < 3; i++) {
                 if (program[i][j] != "") {
                     oldcommands.add(program[i][j]);
@@ -249,7 +253,7 @@ public class MainActivity extends Activity {
         }
         Parser parser = new Parser(oldcommands, commands, Gcom, Ccom, Tcom, Fcom);
         parser.main();
-        if(!parser.isErr()) {
+        if (!parser.isErr()) {
             Toast.makeText(this, "保存しました。", Toast.LENGTH_SHORT).show();
 
             //ファイルにプログラムを保存
@@ -258,7 +262,7 @@ public class MainActivity extends Activity {
             String name = intent.getStringExtra("name");
             String fileName = name + ".text";
             String inputText = "";
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j < 12; j++) {
                 for (int i = 0; i < 3; i++) {
                     inputText += program[i][j];
                     inputText += "\n";
@@ -278,7 +282,7 @@ public class MainActivity extends Activity {
                 message = e.getMessage();
                 e.printStackTrace();
             }
-        }else{
+        } else {
             Toast.makeText(this, "文法がどこか違うよ", Toast.LENGTH_SHORT).show();
         }
     }

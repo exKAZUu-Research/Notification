@@ -68,8 +68,8 @@ public class Parser {
         String str = oldcommands.get(pointer);
         pointer++;
 
-        if (str.equals("ON") || str.equals("OFF") || str.equals("fadeIn")
-                || str.equals("fadeOut")) {
+        if (str.equals("ON") || str.equals("OFF") || str.equals("FadeIn")
+                || str.equals("FadeOut")) {
             pointer--;
             LED_new(mask);
         } else if (str.equals("if")) {
@@ -86,8 +86,8 @@ public class Parser {
 
         String str = oldcommands.get(pointer);
         pointer++;
-        while ((str.equals("ON") || str.equals("OFF") || str.equals("fadeIn")
-                || str.equals("fadeOut")) && pointer < oldcommands.size()) {
+        while ((str.equals("ON") || str.equals("OFF") || str.equals("FadeIn")
+                || str.equals("FadeOut")) && pointer < oldcommands.size()) {
             for (int i = 0; i < 4; i++) {
                 int j = 1 << i; // 1をiだけ左にbitシフト
                 if ((j & mask) == j) { // bitごとのAND演算
@@ -245,13 +245,13 @@ public class Parser {
                     newcom.add("OFF");
                     pointer += 2;
                 }
-            } else if (str.charAt(pointer) == 'f') {
+            } else if (str.charAt(pointer) == 'F') {
                 pointer += 4;
                 if (str.charAt(pointer) == 'I') {
-                    newcom.add("fadeIn");
+                    newcom.add("FadeIn");
                     pointer += 2;
                 } else {
-                    newcom.add("fadeOut");
+                    newcom.add("FadeOut");
                     pointer += 3;
                 }
             }

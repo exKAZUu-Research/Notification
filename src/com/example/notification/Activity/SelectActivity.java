@@ -143,8 +143,10 @@ public class SelectActivity extends Activity {
                 ListView listView = (ListView) parent;
                 final String item = (String) listView.getItemAtPosition(position);
                 LongClickItem = item;
-                AlertDialogFragment dialog = new AlertDialogFragment();
-                dialog.show(getFragmentManager(), "dialog");
+                if (!item.equals("new")) {
+                    AlertDialogFragment dialog = new AlertDialogFragment();
+                    dialog.show(getFragmentManager(), "dialog");
+                }
                 return false;
             }
         });

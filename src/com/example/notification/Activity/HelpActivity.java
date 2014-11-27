@@ -16,7 +16,7 @@ public class HelpActivity extends Activity {
 
     public void onClickStartButton(View v) {
         finish();
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, SelectActivity.class);
         startActivity(intent);
     }
 
