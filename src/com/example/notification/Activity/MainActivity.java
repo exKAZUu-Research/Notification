@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.notification.function.DragViewListener;
 import com.example.notification.function.Parser;
 import com.example.notification.R;
+import com.example.notification.function.ShineLED;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -33,6 +34,7 @@ public class MainActivity extends Activity {
     ArrayList<String> Ccom = new ArrayList<String>();
     ArrayList<String> Tcom = new ArrayList<String>();
     ArrayList<String> Fcom = new ArrayList<String>();
+    MediaPlayer music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -287,69 +289,35 @@ public class MainActivity extends Activity {
         }
     }
 
-    private static boolean checkBeforeWritefile(File file) {
-        if (file.exists()) {
-            if (file.isFile() && file.canWrite()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void onClickGmailButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[0]);
-        LED(Gcom);
+        music = MediaPlayer.create(this, R.raw.led1);
+        ShineLED LED = new ShineLED(Gcom, music);
+        LED.main();
     }
 
     public void onClickCalendarButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[1]);
-        LED(Ccom);
+        music = MediaPlayer.create(this, R.raw.led1);
+        ShineLED LED = new ShineLED(Ccom, music);
+        LED.main();
     }
 
     public void onClickTwitterButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[2]);
-        LED(Tcom);
+        music = MediaPlayer.create(this, R.raw.led1);
+        ShineLED LED = new ShineLED(Tcom, music);
+        LED.main();
     }
 
     public void onClickFacebookButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[3]);
-        LED(Fcom);
-    }
-
-    public void LED(ArrayList<String> com) {
-        MediaPlayer music;
         music = MediaPlayer.create(this, R.raw.led1);
-        //音をならす
-        music.setLooping(true); //ループ設定
-        music.seekTo(0);    //再生位置を0ミリ秒に設定
-
-        for (int i = 0; i < com.size(); i++) {
-            if (com.get(i).equals("ON")) {
-                if (!music.isPlaying()) {
-                    music.start();      //再生開始
-                }
-                try { // 1秒待機
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (com.get(i).equals("OFF")) {
-                if (music.isPlaying()) {
-                    music.pause();
-                }
-                try { // 1秒待機
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        if (music.isPlaying()) {
-            music.pause();
-        }
+        ShineLED LED = new ShineLED(Fcom, music);
+        LED.main();
     }
 }
