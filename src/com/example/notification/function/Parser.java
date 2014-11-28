@@ -9,12 +9,12 @@ public class Parser {
     private String[] commands = new String[4]; // 状態別のコマンドが格納される
     private ArrayList<String> oldcommands = new ArrayList<String>(); // 最初に書かれたコマンドがはいっている
     private int pointer; // ポインター(どこをよんでいるかわかるように)
-    private ArrayList<String> Gcom = new ArrayList<String>();    //音楽を鳴らすときにわかりやすくするためのコマンド
-    private ArrayList<String> Ccom = new ArrayList<String>();
-    private ArrayList<String> Tcom = new ArrayList<String>();
-    private ArrayList<String> Fcom = new ArrayList<String>();
+    private ArrayList<String> Gcom = new ArrayList<String>();   //音楽を鳴らすときにわかりやすくするためのコマンド(Gmail)
+    private ArrayList<String> Ccom = new ArrayList<String>();   //Calendar
+    private ArrayList<String> Tcom = new ArrayList<String>();   //Twitter
+    private ArrayList<String> Fcom = new ArrayList<String>();   //facebook
 
-    private boolean err;
+    private boolean err;        //コンパイルエラーかどうかを確認するためのフラグ
 
     public Parser(ArrayList<String> oldcommands, String[] commands, ArrayList<String> Gcom, ArrayList<String> Ccom, ArrayList<String> Tcom, ArrayList<String> Fcom) {
         this.oldcommands = oldcommands;
@@ -85,7 +85,6 @@ public class Parser {
     public void LED_new(int mask) {
 
         String str = oldcommands.get(pointer);
-        pointer++;
         while ((str.equals("ON") || str.equals("OFF") || str.equals("FadeIn")
                 || str.equals("FadeOut")) && pointer < oldcommands.size()) {
             for (int i = 0; i < 4; i++) {
@@ -94,10 +93,11 @@ public class Parser {
                     commands[i] += str;
                 }
             }
-            str = oldcommands.get(pointer);
             pointer++;
+            if (pointer < oldcommands.size()) {
+                str = oldcommands.get(pointer);
+            }
         }
-        pointer--;
     }
 
     public void ifStatement() {
