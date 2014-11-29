@@ -292,32 +292,28 @@ public class MainActivity extends Activity {
     public void onClickGmailButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[0]);
-        music = MediaPlayer.create(this, R.raw.led1);
-        ShineLED LED = new ShineLED(Gcom, music);
+        ShineLED LED = new ShineLED(Gcom, this);
         LED.main();
     }
 
     public void onClickCalendarButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[1]);
-        music = MediaPlayer.create(this, R.raw.led1);
-        ShineLED LED = new ShineLED(Ccom, music);
+        ShineLED LED = new ShineLED(Ccom, this);
         LED.main();
     }
 
     public void onClickTwitterButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[2]);
-        music = MediaPlayer.create(this, R.raw.led1);
-        ShineLED LED = new ShineLED(Tcom, music);
+        ShineLED LED = new ShineLED(Tcom, this);
         LED.main();
     }
 
     public void onClickFacebookButton(View v) {
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[3]);
-        music = MediaPlayer.create(this, R.raw.led1);
-        ShineLED LED = new ShineLED(Fcom, music);
+        ShineLED LED = new ShineLED(Fcom, this);
         LED.main();
     }
 }

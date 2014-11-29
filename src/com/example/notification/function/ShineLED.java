@@ -11,13 +11,15 @@ public class ShineLED {
 
     private ArrayList<String> com;
     private MediaPlayer music;
+    private Context context;
 
-    public ShineLED(ArrayList<String> com, MediaPlayer music){
+    public ShineLED(ArrayList<String> com, Context context) {
         this.com = com;
-        this.music = music;
+        this.context = context;
     }
 
     public void main() {
+        music = MediaPlayer.create(context, R.raw.led1);
         //音をならす
         music.setLooping(true); //ループ設定
         music.seekTo(0);    //再生位置を0ミリ秒に設定
@@ -47,6 +49,4 @@ public class ShineLED {
             music.pause();
         }
     }
-
-
 }
