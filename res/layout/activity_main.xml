@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <!-- 画面を分割する -->
@@ -870,23 +871,24 @@
         android:layout_toRightOf="@id/image2_8"
         android:src="@drawable/dustbox" />
 
-    <Button
+    <!--<Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:onClick="onClickNextButton"
-        android:text="@string/next" />
+        android:text="@string/next" />-->
 
     <Button
         android:id="@+id/SaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_alignParentRight="true"
         android:onClick="onClickSaveButton"
-        android:text="保存" />
+        android:text="保存"
+        android:background="@drawable/button_customize"/>
 
     <!--　確認ボタン類　-->
     <Button
