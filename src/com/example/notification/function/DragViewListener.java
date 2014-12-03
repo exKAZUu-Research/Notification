@@ -42,6 +42,7 @@ public class DragViewListener implements OnTouchListener {
         int x_index = left / cells[0][0].getWidth();
         int y_index = top / cells[0][0].getHeight();
 
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
                 dragView.layout(left, top, left + dragView.getWidth(), top

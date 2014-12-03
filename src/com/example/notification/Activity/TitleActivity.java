@@ -2,8 +2,12 @@ package com.example.notification.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.example.notification.Activity.HelpActivity;
 import com.example.notification.Activity.MainActivity;
