@@ -1,9 +1,13 @@
 package com.example.notification.Activity;
 
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,14 +19,6 @@ import com.example.notification.function.Parser;
 import com.example.notification.R;
 import com.example.notification.function.ShineLED;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
@@ -35,6 +31,7 @@ public class MainActivity extends Activity {
     ArrayList<String> Tcom = new ArrayList<String>();
     ArrayList<String> Fcom = new ArrayList<String>();
     MediaPlayer music;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,54 +46,48 @@ public class MainActivity extends Activity {
             }
         }
 
-        //ファイルから読み込む
-        try {
-            Intent intent = getIntent();
-            String name = intent.getStringExtra("name");
-            System.out.println(name);
-            if (name.equals("new")) {
-                Intent intent2 = getIntent();
-                String number = intent2.getStringExtra("number");
-                number = String.valueOf(Integer.parseInt(number) + 1);
-                String fileName = "number.text";
-                InputStream in = openFileInput("number.text");
-                String inputText = number;
-                String message = "";
-                try {
-                    FileOutputStream outStream = openFileOutput(fileName, MODE_PRIVATE);
-                    OutputStreamWriter writer = new OutputStreamWriter(outStream);
-                    writer.write(inputText);
-                    writer.flush();
-                    writer.close();
-                    message = "File saved.";
-                } catch (FileNotFoundException e) {
-                    message = e.getMessage();
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    message = e.getMessage();
-                    e.printStackTrace();
-                }
-            } else {
-                InputStream in = openFileInput(name + ".text");
-                BufferedReader reader =
-                        new BufferedReader(new InputStreamReader(in, "UTF-8"));
-                String s;
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        System.out.println(name);
 
-                for (int j = 0; j < 12; j++) {
-                    for (int i = 0; i < 2; i++) {
-                        s = reader.readLine();
-                        if (s.equals("")) {
-                            program[i][j] = "";
-                        } else {
-                            program[i][j] = s;
-                        }
-                    }
-                }
-                reader.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        //データベースからプログラムを読み込む
+        String str = "data/data/" + getPackageName() + "/Sample.db";
+        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
+
+        String qry1 = "CREATE TABLE " + name + " (id INTEGER PRIMARY KEY, text STRING)";
+        String qry3 = "SELECT * FROM " + name;
+
+        //テーブルの作成
+        try {
+            db.execSQL(qry1);
+        } catch (SQLException e) {
+            Log.e("ERROR", e.toString());
         }
+
+        //データの検索
+        Cursor cr = db.rawQuery(qry3, null);
+        //startManagingCursor(cr);
+
+        int x = 0;
+        int y = 0;
+        while (cr.moveToNext()) {
+            int t = cr.getColumnIndex("text");
+            String text = cr.getString(t);
+            if (text.equals("")) {
+                program[x][y] = "";
+            } else {
+                program[x][y] = text;
+            }
+            x++;
+            y++;
+            if (x == 2) {
+                x = 0;
+            } else {
+                y--;
+            }
+        }
+
+        //db.close();
 
         //textviewに表示
         TextView text = (TextView) findViewById(R.id.programs);
@@ -263,34 +254,22 @@ public class MainActivity extends Activity {
         Parser parser = new Parser(oldcommands, commands, Gcom, Ccom, Tcom, Fcom);
         parser.main();
         if (!parser.isErr()) {
-            Toast.makeText(this, "保存しました。", Toast.LENGTH_SHORT).show();
 
-            //ファイルにプログラムを保存
-            String message = "";
-            Intent intent = getIntent();
-            String name = intent.getStringExtra("name");
-            String fileName = name + ".text";
-            String inputText = "";
+            //データベースにプログラムを保存
+            String str = "data/data/" + getPackageName() + "/Sample.db";
+            SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
+            String delete = "DELETE FROM " + name;
+            db.execSQL(delete);
+
             for (int j = 0; j < 12; j++) {
                 for (int i = 0; i < 2; i++) {
-                    inputText += program[i][j];
-                    inputText += "\n";
+                    String qry2 = "INSERT INTO " + name + "(text) VALUES('" + program[i][j] + "')";
+                    db.execSQL(qry2);
                 }
             }
-            try {
-                FileOutputStream outStream = openFileOutput(fileName, MODE_PRIVATE);
-                OutputStreamWriter writer = new OutputStreamWriter(outStream);
-                writer.write(inputText);
-                writer.flush();
-                writer.close();
-                message = "File saved.";
-            } catch (FileNotFoundException e) {
-                message = e.getMessage();
-                e.printStackTrace();
-            } catch (IOException e) {
-                message = e.getMessage();
-                e.printStackTrace();
-            }
+            //db.close();
+
+            Toast.makeText(this, "保存しました。", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "文法がどこか違うよ", Toast.LENGTH_SHORT).show();
         }
