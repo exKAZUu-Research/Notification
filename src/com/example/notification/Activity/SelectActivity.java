@@ -6,6 +6,8 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
@@ -69,6 +71,43 @@ public class SelectActivity extends Activity {
         //最後に新しいプログラムを作れるようにnewを追加
         adapter.add("new");
         ListView listView = (ListView) findViewById(R.id.list);
+
+        //データベース
+        String str = "data/data/" + getPackageName() + "/Sample.db";
+        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
+
+        String qry0 = "DROP TABLE IF EXISTS product";
+        String qry1 = "CREATE TABLE product" + "(id INTEGER PRIMARY KEY, name STRING)";
+        String[] qry2 = {"INSERT INTO product(name) VALUES('テスト')",
+                "INSERT INTO product(name) VALUES('てすと')",
+                "INSERT INTO product(name) VALUES('new')"};
+
+        String qry3 = "SELECT * FROM product";
+
+        //テーブルの作成
+        db.execSQL(qry0);
+        db.execSQL(qry1);
+
+        //データの追加
+        //for (int i = 0; i < qry2.length; i++) {
+        //    db.execSQL(qry2[i]);
+        //}
+
+        //データの検索
+        Cursor cr = db.rawQuery(qry3, null);
+        startManagingCursor(cr);
+
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+
+        while (cr.moveToNext()) {
+            int i = cr.getColumnIndex("id");
+            int n = cr.getColumnIndex("name");
+            int id = cr.getInt(i);
+            String name = cr.getString(n);
+            String row = id + "-----" + name;
+
+            adapter.add(row);
+        }
 
         // アダプターを設定します
         listView.setAdapter(adapter);
@@ -149,7 +188,7 @@ public class SelectActivity extends Activity {
                     LongAlertDialogFragment dialog = new LongAlertDialogFragment();
                     dialog.show(getFragmentManager(), "dialog");
                 }
-                return false;
+                return true;
             }
         });
     }

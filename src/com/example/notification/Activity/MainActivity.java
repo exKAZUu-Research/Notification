@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-    String[][] program = new String[3][12];
+    String[][] program = new String[2][12];
     String[] commands = new String[4];
     String[][] newcoms;
     ArrayList<String> Gcom = new ArrayList<String>();
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         // 右側のテキストたち
 
         for (int i = 0; i < 12; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 2; j++) {
                 program[j][i] = "";
             }
         }
@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
                 String s;
 
                 for (int j = 0; j < 12; j++) {
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < 2; i++) {
                         s = reader.readLine();
                         if (s.equals("")) {
                             program[i][j] = "";
@@ -100,23 +100,23 @@ public class MainActivity extends Activity {
 
         //textviewに表示
         TextView text = (TextView) findViewById(R.id.programs);
-        text.setText(program[0][0] + program[1][0] + program[2][0] + "\n"
-                + program[0][1] + program[1][1] + program[2][1] + "\n"
-                + program[0][2] + program[1][2] + program[2][2] + "\n"
-                + program[0][3] + program[1][3] + program[2][3] + "\n"
-                + program[0][4] + program[1][4] + program[2][4] + "\n"
-                + program[0][5] + program[1][5] + program[2][5] + "\n"
-                + program[0][6] + program[1][6] + program[2][6] + "\n"
-                + program[0][7] + program[1][7] + program[2][7] + "\n"
-                + program[0][8] + program[1][8] + program[2][8] + "\n"
-                + program[0][9] + program[1][9] + program[2][9] + "\n"
-                + program[0][10] + program[1][10] + program[2][10] + "\n"
-                + program[0][11] + program[1][11] + program[2][11]);
+        text.setText(program[0][0] + program[1][0] + "\n"
+                + program[0][1] + program[1][1] + "\n"
+                + program[0][2] + program[1][2] + "\n"
+                + program[0][3] + program[1][3] + "\n"
+                + program[0][4] + program[1][4] + "\n"
+                + program[0][5] + program[1][5] + "\n"
+                + program[0][6] + program[1][6] + "\n"
+                + program[0][7] + program[1][7] + "\n"
+                + program[0][8] + program[1][8] + "\n"
+                + program[0][9] + program[1][9] + "\n"
+                + program[0][10] + program[1][10] + "\n"
+                + program[0][11] + program[1][11]);
 
         //記述可能部分
-        ImageView[][] canwrite = new ImageView[3][12];
-        int[][] resc = new int[3][12];
-        for (int i = 0; i < 3; i++) {
+        ImageView[][] canwrite = new ImageView[2][12];
+        int[][] resc = new int[2][12];
+        for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 12; j++) {
                 resc[i][j] = this.getResources().getIdentifier("canwrite" + i + "_" + j, "id", this.getPackageName());
                 canwrite[i][j] = (ImageView) findViewById(resc[i][j]);
@@ -124,12 +124,12 @@ public class MainActivity extends Activity {
         }
 
         // 背景たち
-        int[][] cellsId = new int[3][12];
-        ImageView[][] cells = new ImageView[3][12];
-        DragViewListener[][] backgroundlistener = new DragViewListener[3][12];
-        int[][] flag = new int[3][12];
+        int[][] cellsId = new int[2][12];
+        ImageView[][] cells = new ImageView[2][12];
+        DragViewListener[][] backgroundlistener = new DragViewListener[2][12];
+        int[][] flag = new int[2][12];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 12; j++) {
                 flag[i][j] = 0;
                 cellsId[i][j] = this.getResources().getIdentifier("image" + i + "_" + j, "id", this.getPackageName());
@@ -140,7 +140,7 @@ public class MainActivity extends Activity {
         }
 
         //保存されていたものをアイコンに戻す用
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 12; j++) {
                 if (program[i][j].equals("Gmail")) {
                     cells[i][j].setImageResource(R.drawable.icon_gmail);
@@ -195,7 +195,7 @@ public class MainActivity extends Activity {
         //次の入力場所の表示
         for (int j = 0; j < 12; j++) {
             int f = 0;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 2; i++) {
                 if (program[i][j] == "") {
                     if (f == 0) {
                         canwrite[i][j].setImageResource(R.drawable.haikei);
@@ -206,6 +206,13 @@ public class MainActivity extends Activity {
                 } else {
                     canwrite[i][j].setImageResource(R.drawable.haikei_kuro);
                 }
+            }
+        }
+
+        //2列目以降入力可能にするかどうかの変更
+        for (int j = 0; j < 12; j++) {
+            if (!program[0][j].equals("") && !program[0][j].equals("if") && !program[0][j].equals("elseif") && !program[0][j].equals("for")) {
+                canwrite[1][j].setImageResource(R.drawable.haikei_kuro);
             }
         }
 
@@ -247,7 +254,7 @@ public class MainActivity extends Activity {
     public void onClickSaveButton(View v) {
         ArrayList<String> oldcommands = new ArrayList<String>();
         for (int j = 0; j < 12; j++) {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 2; i++) {
                 if (program[i][j] != "") {
                     oldcommands.add(program[i][j]);
                 }
@@ -265,7 +272,7 @@ public class MainActivity extends Activity {
             String fileName = name + ".text";
             String inputText = "";
             for (int j = 0; j < 12; j++) {
-                for (int i = 0; i < 3; i++) {
+                for (int i = 0; i < 2; i++) {
                     inputText += program[i][j];
                     inputText += "\n";
                 }
@@ -287,6 +294,10 @@ public class MainActivity extends Activity {
         } else {
             Toast.makeText(this, "文法がどこか違うよ", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onClickReturnButton(View v) {
+        finish();
     }
 
     public void onClickGmailButton(View v) {

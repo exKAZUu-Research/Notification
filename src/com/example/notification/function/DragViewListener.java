@@ -39,9 +39,12 @@ public class DragViewListener implements OnTouchListener {
         int left = dragView.getLeft() + (x - oldx);
         int top = dragView.getTop() + (y - oldy);
 
-        int x_index = left / cells[0][0].getWidth();
-        int y_index = top / cells[0][0].getHeight();
+        //int x_index = left / cells[0][0].getWidth();
+        //int y_index = top / cells[0][0].getHeight();
 
+        //Nexus7 のサイズ800×1205
+        int x_index = (800 - left) / cells[0][0].getWidth();
+        int y_index = top / cells[0][0].getHeight();
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
@@ -49,72 +52,80 @@ public class DragViewListener implements OnTouchListener {
                         + dragView.getHeight());
                 break;
             case MotionEvent.ACTION_UP:
-                if (0 <= x_index && x_index <= 2 && 0 <= y_index && y_index <= 11) {
-                    if (view.getId() == R.id.imageView1) {
-                        program[x_index][y_index] = "Gmail";
-                    } else if (view.getId() == R.id.imageView2) {
-                        program[x_index][y_index] = "Calendar";
-                    } else if (view.getId() == R.id.imageView3) {
-                        program[x_index][y_index] = "Twitter";
-                    } else if (view.getId() == R.id.imageView4) {
-                        program[x_index][y_index] = "Facebook";
-                    } else if (view.getId() == R.id.imageView5) {
-                        program[x_index][y_index] = "for";
-                    } else if (view.getId() == R.id.imageView6) {
-                        program[x_index][y_index] = "forend";
-                    } else if (view.getId() == R.id.imageView7) {
-                        program[x_index][y_index] = "ON";
-                    } else if (view.getId() == R.id.imageView8) {
-                        program[x_index][y_index] = "OFF";
-                    } else if (view.getId() == R.id.imageView9) {
-                        program[x_index][y_index] = "if";
-                    } else if (view.getId() == R.id.imageView10) {
-                        program[x_index][y_index] = "else";
-                    } else if (view.getId() == R.id.imageView11) {
-                        program[x_index][y_index] = "elseif";
-                    } else if (view.getId() == R.id.imageView12) {
-                        program[x_index][y_index] = "ifend";
-                    } else if (view.getId() == R.id.imageView01) {
-                        program[x_index][y_index] = "1";
-                    } else if (view.getId() == R.id.imageView02) {
-                        program[x_index][y_index] = "2";
-                    } else if (view.getId() == R.id.imageView03) {
-                        program[x_index][y_index] = "3";
-                    } else if (view.getId() == R.id.imageView04) {
-                        program[x_index][y_index] = "4";
-                    } else if (view.getId() == R.id.imageView05) {
-                        program[x_index][y_index] = "5";
-                    } else if (view.getId() == R.id.imageView06) {
-                        program[x_index][y_index] = "6";
-                    } else if (view.getId() == R.id.imageView07) {
-                        program[x_index][y_index] = "7";
-                    } else if (view.getId() == R.id.imageView08) {
-                        program[x_index][y_index] = "8";
-                    } else if (view.getId() == R.id.imageView09) {
-                        program[x_index][y_index] = "9";
-                    } else if (view.getId() == R.id.imageView00) {
-                        program[x_index][y_index] = "0";
+                if (x_index <= 2 && 0 <= y_index && y_index <= 11) {
+                    if (x_index == 2) {
+                        x_index = 0;
                     } else {
-                        for (int i = 0; i < 3; i++) {
-                            for (int j = 0; j < 12; j++) {
-                                if (view.getId() == cellsId[i][j]) {
-                                    if (program[i][j] != "") {
-                                        if (x_index == i && y_index == j) {
-                                        } else {
-                                            program[x_index][y_index] = program[i][j];
-                                            program[i][j] = "";
-                                            break;
+                        x_index = 1;
+                    }
+                    if (x_index == 1 && !program[0][y_index].equals("for") && !program[0][y_index].equals("if") && !program[0][y_index].equals("elseif")) {
+                    } else {
+                        if (view.getId() == R.id.imageView1) {
+                            program[x_index][y_index] = "Gmail";
+                        } else if (view.getId() == R.id.imageView2) {
+                            program[x_index][y_index] = "Calendar";
+                        } else if (view.getId() == R.id.imageView3) {
+                            program[x_index][y_index] = "Twitter";
+                        } else if (view.getId() == R.id.imageView4) {
+                            program[x_index][y_index] = "Facebook";
+                        } else if (view.getId() == R.id.imageView5) {
+                            program[x_index][y_index] = "for";
+                        } else if (view.getId() == R.id.imageView6) {
+                            program[x_index][y_index] = "forend";
+                        } else if (view.getId() == R.id.imageView7) {
+                            program[x_index][y_index] = "ON";
+                        } else if (view.getId() == R.id.imageView8) {
+                            program[x_index][y_index] = "OFF";
+                        } else if (view.getId() == R.id.imageView9) {
+                            program[x_index][y_index] = "if";
+                        } else if (view.getId() == R.id.imageView10) {
+                            program[x_index][y_index] = "else";
+                        } else if (view.getId() == R.id.imageView11) {
+                            program[x_index][y_index] = "elseif";
+                        } else if (view.getId() == R.id.imageView12) {
+                            program[x_index][y_index] = "ifend";
+                        } else if (view.getId() == R.id.imageView01) {
+                            program[x_index][y_index] = "1";
+                        } else if (view.getId() == R.id.imageView02) {
+                            program[x_index][y_index] = "2";
+                        } else if (view.getId() == R.id.imageView03) {
+                            program[x_index][y_index] = "3";
+                        } else if (view.getId() == R.id.imageView04) {
+                            program[x_index][y_index] = "4";
+                        } else if (view.getId() == R.id.imageView05) {
+                            program[x_index][y_index] = "5";
+                        } else if (view.getId() == R.id.imageView06) {
+                            program[x_index][y_index] = "6";
+                        } else if (view.getId() == R.id.imageView07) {
+                            program[x_index][y_index] = "7";
+                        } else if (view.getId() == R.id.imageView08) {
+                            program[x_index][y_index] = "8";
+                        } else if (view.getId() == R.id.imageView09) {
+                            program[x_index][y_index] = "9";
+                        } else if (view.getId() == R.id.imageView00) {
+                            program[x_index][y_index] = "0";
+                        } else {
+                            for (int i = 0; i < 2; i++) {
+                                for (int j = 0; j < 12; j++) {
+                                    if (view.getId() == cellsId[i][j]) {
+                                        if (program[i][j] != "") {
+                                            if (x_index == i && y_index == j) {
+                                            } else {
+                                                program[x_index][y_index] = program[i][j];
+                                                program[i][j] = "";
+                                                break;
+                                            }
                                         }
                                     }
-                                }
 
+                                }
                             }
                         }
                     }
 
-                } else if (3 <= x_index && x_index <= 4 && 9 <= y_index && y_index <= 10) {
-                    for (int i = 0; i < 3; i++) {
-                        for (int j = 0; j < 9; j++) {
+                } else if (3 <= x_index && x_index <= 4 && 10 <= y_index && y_index <= 11) {
+                    for (int i = 0; i < 2; i++) {
+                        for (int j = 0; j < 11; j++) {
                             if (view.getId() == cellsId[i][j]) {
                                 program[i][j] = "";
                             }
@@ -125,8 +136,8 @@ public class DragViewListener implements OnTouchListener {
                 }
 
                 for (int j = 0; j < 12; j++) {
-                    for (int count = 0; count < 2; count++) {
-                        for (int i = 0; i < 2; i++) {
+                    for (int count = 0; count < 1; count++) {
+                        for (int i = 0; i < 1; i++) {
                             if (program[i][j] == "") {
                                 program[i][j] = program[i + 1][j];
                                 program[i + 1][j] = "";
@@ -135,7 +146,7 @@ public class DragViewListener implements OnTouchListener {
                     }
                 }
                 //アイコンに変更
-                for (int i = 0; i < 3; i++) {
+                for (int i = 0; i < 2; i++) {
                     for (int j = 0; j < 12; j++) {
                         if (program[i][j].equals("Gmail")) {
                             cells[i][j].setImageResource(R.drawable.icon_gmail);
@@ -190,8 +201,8 @@ public class DragViewListener implements OnTouchListener {
                 //次の入力場所の表示
                 for (int j = 0; j < 12; j++) {
                     int flag = 0;
-                    for (int i = 0; i < 3; i++) {
-                        if (program[i][j] == "") {
+                    for (int i = 0; i < 2; i++) {
+                        if (program[i][j].equals("")) {
                             if (flag == 0) {
                                 canwrite[i][j].setImageResource(R.drawable.haikei);
                                 flag = 1;
@@ -204,18 +215,25 @@ public class DragViewListener implements OnTouchListener {
                     }
                 }
 
-                text.setText(program[0][0] + program[1][0] + program[2][0] + "\n"
-                        + program[0][1] + program[1][1] + program[2][1] + "\n"
-                        + program[0][2] + program[1][2] + program[2][2] + "\n"
-                        + program[0][3] + program[1][3] + program[2][3] + "\n"
-                        + program[0][4] + program[1][4] + program[2][4] + "\n"
-                        + program[0][5] + program[1][5] + program[2][5] + "\n"
-                        + program[0][6] + program[1][6] + program[2][6] + "\n"
-                        + program[0][7] + program[1][7] + program[2][7] + "\n"
-                        + program[0][8] + program[1][8] + program[2][8] + "\n"
-                        + program[0][9] + program[1][9] + program[2][9] + "\n"
-                        + program[0][10] + program[1][10] + program[2][10] + "\n"
-                        + program[0][11] + program[1][11] + program[2][11]);
+                //2列目以降入力可能にするかどうかの変更
+                for (int j = 0; j < 12; j++) {
+                    if (!program[0][j].equals("") && !program[0][j].equals("if") && !program[0][j].equals("elseif") && !program[0][j].equals("for")) {
+                        canwrite[1][j].setImageResource(R.drawable.haikei_kuro);
+                    }
+                }
+
+                text.setText(program[0][0] + program[1][0] + "\n"
+                        + program[0][1] + program[1][1] + "\n"
+                        + program[0][2] + program[1][2] + "\n"
+                        + program[0][3] + program[1][3] + "\n"
+                        + program[0][4] + program[1][4] + "\n"
+                        + program[0][5] + program[1][5] + "\n"
+                        + program[0][6] + program[1][6] + "\n"
+                        + program[0][7] + program[1][7] + "\n"
+                        + program[0][8] + program[1][8] + "\n"
+                        + program[0][9] + program[1][9] + "\n"
+                        + program[0][10] + program[1][10] + "\n"
+                        + program[0][11] + program[1][11]);
         }
 
         oldx = x;
