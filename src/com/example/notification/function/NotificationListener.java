@@ -26,10 +26,17 @@ public class NotificationListener extends NotificationListenerService {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                 ArrayList<String> com = new ArrayList<String>();
                 if (sbn.getPackageName().equals("jp.mynavi.notification.android.notificationsample")) {
-                    System.out.println("音なるはず");
+                    comName = "Fcom";
+                } else if (sbn.getPackageName().equals("com.google.android.gm")) {
                     comName = "Gcom";
-                } else {
+                } else if (sbn.getPackageName().equals("com.google.android.calendar")) {
                     comName = "Ccom";
+                } else if (sbn.getPackageName().equals("com.twitter.android")) {
+                    comName = "Tcom";
+                } else if (sbn.getPackageName().equals("com.facebook.katana")) {
+                    comName = "Fcom";
+                } else {
+                    comName = "";
                 }
 
                 //データベースから読み込む

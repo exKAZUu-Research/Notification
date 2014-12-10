@@ -43,10 +43,6 @@
             android:name=".Activity.HelpActivity"
             android:label="HelpActivity"></activity>
 
-        <activity
-            android:name=".Activity.SampleActivity"
-            android:label="SampleActivity"></activity>
-
         <service
             android:name=".function.NotificationListener"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
