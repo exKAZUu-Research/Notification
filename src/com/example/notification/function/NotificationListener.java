@@ -25,6 +25,7 @@ public class NotificationListener extends NotificationListenerService {
             public void run() {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                 ArrayList<String> com = new ArrayList<String>();
+                int flag = 0;
                 if (sbn.getPackageName().equals("jp.mynavi.notification.android.notificationsample")) {
                     comName = "Fcom";
                 } else if (sbn.getPackageName().equals("com.google.android.gm")) {
@@ -37,40 +38,43 @@ public class NotificationListener extends NotificationListenerService {
                     comName = "Fcom";
                 } else {
                     comName = "";
+                    flag = 1;
                 }
 
-                //データベースから読み込む
-                String str = "data/data/" + getPackageName() + "/Sample.db";
-                SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
+                if (flag != 1) {
+                    //データベースから読み込む
+                    String str = "data/data/" + getPackageName() + "/Sample.db";
+                    SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
 
-                String qry1 = "CREATE TABLE " + comName + " (id INTEGER PRIMARY KEY, text STRING)";
-                String qry3 = "SELECT * FROM " + comName;
+                    String qry1 = "CREATE TABLE " + comName + " (id INTEGER PRIMARY KEY, text STRING)";
+                    String qry3 = "SELECT * FROM " + comName;
 
-                //テーブルの作成
-                try {
-                    db.execSQL(qry1);
-                } catch (SQLException e) {
-                    Log.e("ERROR", e.toString());
+                    //テーブルの作成
+                    try {
+                        db.execSQL(qry1);
+                    } catch (SQLException e) {
+                        Log.e("ERROR", e.toString());
+                    }
+
+                    //データの検索
+                    Cursor cr = db.rawQuery(qry3, null);
+                    //startManagingCursor(cr);
+
+                    int x = 0;
+                    int y = 0;
+                    while (cr.moveToNext()) {
+                        int t = cr.getColumnIndex("text");
+                        String text = cr.getString(t);
+                        com.add(text);
+                    }
+                    //db.close();
+
+                    if (comName.equals("Gcom") || comName.equals("Ccom") || comName.equals("Tcom") || comName.equals("Fcom")) {
+                        ShineLED LED = new ShineLED(com, getApplicationContext());
+                        LED.main();
+                    }
+                    System.out.println(msg);
                 }
-
-                //データの検索
-                Cursor cr = db.rawQuery(qry3, null);
-                //startManagingCursor(cr);
-
-                int x = 0;
-                int y = 0;
-                while (cr.moveToNext()) {
-                    int t = cr.getColumnIndex("text");
-                    String text = cr.getString(t);
-                    com.add(text);
-                }
-                //db.close();
-
-                if (comName.equals("Gcom") || comName.equals("Ccom") || comName.equals("Tcom") || comName.equals("Fcom")) {
-                    ShineLED LED = new ShineLED(com, getApplicationContext());
-                    LED.main();
-                }
-                System.out.println(msg);
             }
         });
     }
