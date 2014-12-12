@@ -6,9 +6,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/select_background">
 
-    <ListView
-        android:id="@+id/list"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></ListView>
+
+        <TextView
+            android:id="@+id/setMain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="メイン："
+            android:textSize="30dp"/>
+
+    </LinearLayout>
 </LinearLayout>

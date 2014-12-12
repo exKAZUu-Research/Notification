@@ -19,7 +19,7 @@ public class ShineLED {
     }
 
     public void main() {
-        music = MediaPlayer.create(context, R.raw.led1);
+        music = MediaPlayer.create(context, R.raw.led12060);
         //音をならす
         music.setLooping(true); //ループ設定
         music.seekTo(0);    //再生位置を0ミリ秒に設定
@@ -29,8 +29,8 @@ public class ShineLED {
                 if (!music.isPlaying()) {
                     music.start();      //再生開始
                 }
-                try { // 1秒待機
-                    Thread.sleep(300);
+                try { // 0.5秒待機
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -38,8 +38,8 @@ public class ShineLED {
                 if (music.isPlaying()) {
                     music.pause();
                 }
-                try { // 1秒待機
-                    Thread.sleep(300);
+                try { // 0.5秒待機
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

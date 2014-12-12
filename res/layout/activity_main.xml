@@ -674,15 +674,6 @@
         android:layout_toLeftOf="@id/image0_10"
         android:src="@drawable/dustbox" />
 
-    <!--<Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="onClickNextButton"
-        android:text="@string/next" />-->
-
     <Button
         android:id="@+id/SaveButton"
         android:layout_width="wrap_content"

@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -233,12 +234,15 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    String html = "";
-
-    //nextボタンの動作
-    public void onClickNextButton(View v) {     //画面遷移
-        Intent intent = new Intent(this, NextActivity.class);
-        startActivity(intent);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.helpInMenu:
+                Intent intent = new Intent(this, HelpActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //保存ボタン
@@ -306,4 +310,5 @@ public class MainActivity extends Activity {
         ShineLED LED = new ShineLED(Fcom, this);
         LED.main();
     }
+
 }

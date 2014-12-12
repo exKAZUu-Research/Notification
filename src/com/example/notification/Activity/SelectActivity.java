@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.notification.R;
@@ -39,11 +40,12 @@ public class SelectActivity extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         ListView listView = (ListView) findViewById(R.id.list);
 
-        //データベース
+
         String str = "data/data/" + getPackageName() + "/Sample.db";
         SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
 
-        String qry1 = "CREATE TABLE product" + "(id INTEGER PRIMARY KEY, name STRING)";
+        //データベース
+        String qry1 = "CREATE TABLE product" + "(id INTEGER PRIMARY KEY, name STRING, main STRING)";
         String qry3 = "SELECT * FROM product";
 
         //テーブルの作成
@@ -53,9 +55,19 @@ public class SelectActivity extends Activity {
             Log.e("ERROR", e.toString());
         }
 
+        String qrys = "SELECT name FROM product WHERE main = 'true'";
+        Cursor cr2 = db.rawQuery(qrys, null);
+        cr2.moveToFirst();
+        int main = cr2.getColumnIndex("name");
+        if (main != 0) {
+            String mainName = cr2.getString(main);
+            TextView textViewMain = (TextView) findViewById(R.id.setMain);
+            textViewMain.setText("メイン：" + mainName);
+        }
+
         //データの検索
         Cursor cr = db.rawQuery(qry3, null);
-        startManagingCursor(cr);
+        //startManagingCursor(cr);
 
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
 
@@ -103,7 +115,7 @@ public class SelectActivity extends Activity {
 
                                         String str = "data/data/" + getPackageName() + "/Sample.db";
                                         SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
-                                        String qry = "INSERT INTO product(name) VALUES('" + fileName + "')";
+                                        String qry = "INSERT INTO product(name, main) VALUES('" + fileName + "', 'false')";
                                         db.execSQL(qry);
                                         //db.close();
 
@@ -182,9 +194,15 @@ public class SelectActivity extends Activity {
                         Log.e("ERROR", e.toString());
                     }
 
+                    //メインかどうかのフラグの更新
+                    String qryu2 = "UPDATE product SET main = 'false'";
+                    String qryu = "UPDATE product SET main = 'true' WHERE name = '" + ClickItem + "'";
+                    db.execSQL(qryu2);
+                    db.execSQL(qryu);
+
                     //データの検索
                     Cursor cr = db.rawQuery(qry3, null);
-                    startManagingCursor(cr);
+                    //startManagingCursor(cr);
 
                     int x = 0;
                     int y = 0;
@@ -256,21 +274,30 @@ public class SelectActivity extends Activity {
 
                     String qry;
                     for (int i = 0; i < Gcom.size(); i++) {
-                        qry =  "INSERT INTO Gcom(text) VALUES('" + Gcom.get(i) + "')";
+                        qry = "INSERT INTO Gcom(text) VALUES('" + Gcom.get(i) + "')";
                         db.execSQL(qry);
                     }
                     for (int i = 0; i < Ccom.size(); i++) {
-                        qry =  "INSERT INTO Ccom(text) VALUES('" + Ccom.get(i) + "')";
+                        qry = "INSERT INTO Ccom(text) VALUES('" + Ccom.get(i) + "')";
                         db.execSQL(qry);
                     }
                     for (int i = 0; i < Tcom.size(); i++) {
-                        qry =  "INSERT INTO Tcom(text) VALUES('" + Tcom.get(i) + "')";
+                        qry = "INSERT INTO Tcom(text) VALUES('" + Tcom.get(i) + "')";
                         db.execSQL(qry);
                     }
                     for (int i = 0; i < Fcom.size(); i++) {
-                        qry =  "INSERT INTO Fcom(text) VALUES('" + Fcom.get(i) + "')";
+                        qry = "INSERT INTO Fcom(text) VALUES('" + Fcom.get(i) + "')";
                         db.execSQL(qry);
                     }
+
+                    String qrys = "SELECT name FROM product WHERE main = 'true'";
+                    Cursor cr2 = db.rawQuery(qrys, null);
+                    cr2.moveToFirst();
+                    int main = cr2.getColumnIndex("name");
+                    String mainName = cr2.getString(main);
+                    TextView textViewMain = (TextView) findViewById(R.id.setMain);
+                    textViewMain.setText("メイン：" + mainName);
+
                     //db.close();
                 }
             });
