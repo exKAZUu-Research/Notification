@@ -87,7 +87,7 @@ public class SelectActivity extends Activity {
         ListView lv = (ListView) findViewById(R.id.list);
 
         //最後に新しいプログラムを作れるようにnewを追加
-        adapter.add("new");
+        adapter.add("新しく作る");
 
         //リストの項目を押したときの処理
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -96,7 +96,7 @@ public class SelectActivity extends Activity {
                 ListView listView = (ListView) parent;
                 // クリックされたアイテムを取得
                 final String item = (String) listView.getItemAtPosition(position);
-                if (item.equals("new")) {
+                if (item.equals("新しく作る")) {
                     LayoutInflater inflater = LayoutInflater.from(SelectActivity.this);
                     View textview = inflater.inflate(R.layout.dialog, null);
                     final EditText editText = (EditText) textview.findViewById(R.id.editText);
@@ -144,7 +144,7 @@ public class SelectActivity extends Activity {
                 ListView listView = (ListView) parent;
                 final String item = (String) listView.getItemAtPosition(position);
                 LongClickItem = item;
-                if (!item.equals("new")) {
+                if (!item.equals("新しく作る")) {
                     LongAlertDialogFragment dialog = new LongAlertDialogFragment();
                     dialog.show(getFragmentManager(), "dialog");
                 }

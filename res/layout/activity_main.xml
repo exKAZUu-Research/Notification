@@ -17,29 +17,28 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_width="wrap_content"
+            android:layout_height="740dip"
+            android:layout_weight="1"
+            android:background="@drawable/dotted_line">
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dip"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/programs"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
+                android:layout_height="fill_parent"
+                android:visibility="invisible"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- アイコンたち -->
 
+    <!-- アイコンたち -->
     <TextView
         android:id="@+id/action"
         android:layout_width="wrap_content"
@@ -106,11 +105,11 @@
         android:src="@drawable/icon_if_kokomade" />
 
     <TextView
-        android:id="@+id/reason"
+        android:id="@+id/event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="状態"
+        android:text="イベント"
         android:layout_below="@id/imageView9"
         android:textSize="25dp"
         android:textColor="#274765" />
@@ -119,14 +118,14 @@
         android:id="@+id/imageView1"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_below="@id/reason"
+        android:layout_below="@id/event"
         android:src="@drawable/icon_gmail" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_below="@id/reason"
+        android:layout_below="@id/event"
         android:layout_toRightOf="@id/imageView1"
         android:src="@drawable/icon_calender" />
 
@@ -134,7 +133,7 @@
         android:id="@+id/imageView3"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_below="@id/reason"
+        android:layout_below="@id/event"
         android:layout_toRightOf="@id/imageView2"
         android:src="@drawable/icon_twitter" />
 
@@ -142,7 +141,7 @@
         android:id="@+id/imageView4"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_below="@id/reason"
+        android:layout_below="@id/event"
         android:layout_toRightOf="@id/imageView3"
         android:src="@drawable/icon_fb" />
 
@@ -154,7 +153,7 @@
         android:text="繰り返し"
         android:layout_below="@id/imageView1"
         android:textSize="25dp"
-        android:textColor="#005931"/>
+        android:textColor="#005931" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -179,7 +178,7 @@
         android:text="数字"
         android:layout_below="@id/imageView5"
         android:textSize="25dp"
-        android:textColor="#F36C21"/>
+        android:textColor="#F36C21" />
 
     <ImageView
         android:id="@+id/imageView01"
@@ -258,13 +257,28 @@
         android:src="@drawable/num0" />
 
     <!-- 背景たち -->
+
+    <ImageView
+        android:id="@+id/layout1"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/haikei_kuro" />
+
+    <ImageView
+        android:id="@+id/layout"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_toLeftOf="@id/layout1"
+        android:src="@drawable/haikei_kuro" />
+
     <!-- 1行目 -->
 
     <ImageView
         android:id="@+id/image1_0"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:src="@drawable/haikei_kuro" />
 
     <ImageView
@@ -279,7 +293,7 @@
         android:id="@+id/image1_1"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_0"
         android:src="@drawable/haikei_kuro" />
 
@@ -297,7 +311,7 @@
         android:id="@+id/image1_2"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_1"
         android:src="@drawable/haikei_kuro" />
 
@@ -314,7 +328,7 @@
         android:id="@+id/image1_3"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_2"
         android:src="@drawable/haikei_kuro" />
 
@@ -331,7 +345,7 @@
         android:id="@+id/image1_4"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_3"
         android:src="@drawable/haikei_kuro" />
 
@@ -348,7 +362,7 @@
         android:id="@+id/image1_5"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_4"
         android:src="@drawable/haikei_kuro" />
 
@@ -365,7 +379,7 @@
         android:id="@+id/image1_6"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_5"
         android:src="@drawable/haikei_kuro" />
 
@@ -382,7 +396,7 @@
         android:id="@+id/image1_7"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_6"
         android:src="@drawable/haikei_kuro" />
 
@@ -399,7 +413,7 @@
         android:id="@+id/image1_8"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_7"
         android:src="@drawable/haikei_kuro" />
 
@@ -416,7 +430,7 @@
         android:id="@+id/image1_9"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_8"
         android:src="@drawable/haikei_kuro" />
 
@@ -433,7 +447,7 @@
         android:id="@+id/image1_10"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_9"
         android:src="@drawable/haikei_kuro" />
 
@@ -450,7 +464,7 @@
         android:id="@+id/image1_11"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/image1_10"
         android:src="@drawable/haikei_kuro" />
 
@@ -468,7 +482,7 @@
         android:id="@+id/canwrite1_0"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:src="@drawable/haikei_kuro" />
 
     <ImageView
@@ -483,7 +497,7 @@
         android:id="@+id/canwrite1_1"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_0"
         android:src="@drawable/haikei_kuro" />
 
@@ -500,7 +514,7 @@
         android:id="@+id/canwrite1_2"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_1"
         android:src="@drawable/haikei_kuro" />
 
@@ -517,7 +531,7 @@
         android:id="@+id/canwrite1_3"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_2"
         android:src="@drawable/haikei_kuro" />
 
@@ -534,7 +548,7 @@
         android:id="@+id/canwrite1_4"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_3"
         android:src="@drawable/haikei_kuro" />
 
@@ -551,7 +565,7 @@
         android:id="@+id/canwrite1_5"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_4"
         android:src="@drawable/haikei_kuro" />
 
@@ -568,7 +582,7 @@
         android:id="@+id/canwrite1_6"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_5"
         android:src="@drawable/haikei_kuro" />
 
@@ -585,7 +599,7 @@
         android:id="@+id/canwrite1_7"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_6"
         android:src="@drawable/haikei_kuro" />
 
@@ -602,7 +616,7 @@
         android:id="@+id/canwrite1_8"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_7"
         android:src="@drawable/haikei_kuro" />
 
@@ -619,7 +633,7 @@
         android:id="@+id/canwrite1_9"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_8"
         android:src="@drawable/haikei_kuro" />
 
@@ -636,7 +650,7 @@
         android:id="@+id/canwrite1_10"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_9"
         android:src="@drawable/haikei_kuro" />
 
@@ -653,7 +667,7 @@
         android:id="@+id/canwrite1_11"
         android:layout_width="61dip"
         android:layout_height="61dip"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/layout"
         android:layout_below="@id/canwrite1_10"
         android:src="@drawable/haikei_kuro" />
 
@@ -671,12 +685,12 @@
         android:layout_width="122dip"
         android:layout_height="122dip"
         android:layout_below="@id/image1_9"
-        android:layout_toLeftOf="@id/image0_10"
+        android:layout_alignParentRight="true"
         android:src="@drawable/dustbox" />
 
     <Button
         android:id="@+id/SaveButton"
-        android:layout_width="wrap_content"
+        android:layout_width="150dip"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -691,7 +705,7 @@
         android:layout_toLeftOf="@id/SaveButton"
         android:layout_alignParentBottom="true"
         android:onClick="onClickReturnButton"
-        android:text="戻る"/>
+        android:text="戻る" />
 
     <!--　確認ボタン類　-->
     <Button

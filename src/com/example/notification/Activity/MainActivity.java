@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -284,6 +286,16 @@ public class MainActivity extends Activity {
     }
 
     public void onClickGmailButton(View v) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_gmail, null);
+
+        //ImageView image = (ImageView) findViewById(R.id.toast_image);
+        //image.setImageResource(R.drawable.icon_gmail);
+        Toast gtoast = new Toast(getApplicationContext());
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setView(layout);
+        gtoast.show();
+
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[0]);
         ShineLED LED = new ShineLED(Gcom, this);
@@ -291,6 +303,16 @@ public class MainActivity extends Activity {
     }
 
     public void onClickCalendarButton(View v) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_gmail, null);
+
+        ImageView image = (ImageView) findViewById(R.id.toast_image);
+        image.setImageResource(R.drawable.icon_gmail);
+        Toast gtoast = new Toast(getApplicationContext());
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setView(layout);
+        gtoast.show();
+
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[1]);
         ShineLED LED = new ShineLED(Ccom, this);
@@ -298,6 +320,16 @@ public class MainActivity extends Activity {
     }
 
     public void onClickTwitterButton(View v) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_gmail, null);
+
+        ImageView image = (ImageView) findViewById(R.id.toast_image);
+        image.setImageResource(R.drawable.icon_gmail);
+        Toast gtoast = new Toast(getApplicationContext());
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setView(layout);
+        gtoast.show();
+
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[2]);
         ShineLED LED = new ShineLED(Tcom, this);
@@ -305,6 +337,16 @@ public class MainActivity extends Activity {
     }
 
     public void onClickFacebookButton(View v) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_gmail, null);
+
+        ImageView image = (ImageView) findViewById(R.id.toast_image);
+        image.setImageResource(R.drawable.icon_gmail);
+        Toast gtoast = new Toast(getApplicationContext());
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setView(layout);
+        gtoast.show();
+
         TextView text = (TextView) findViewById(R.id.programs);
         text.setText(commands[3]);
         ShineLED LED = new ShineLED(Fcom, this);

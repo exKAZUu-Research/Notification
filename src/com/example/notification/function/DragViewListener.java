@@ -46,13 +46,16 @@ public class DragViewListener implements OnTouchListener {
         int x_index = (800 - left) / cells[0][0].getWidth();
         int y_index = top / cells[0][0].getHeight();
 
+        int test = 3 / 5;
+        System.out.println(test);
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
                 dragView.layout(left, top, left + dragView.getWidth(), top
                         + dragView.getHeight());
                 break;
             case MotionEvent.ACTION_UP:
-                if (x_index <= 2 && 0 <= y_index && y_index <= 11) {
+                if (2 <= x_index && x_index <= 4 && 0 <= y_index && y_index <= 11) {
+                    x_index = x_index - 2;
                     if (x_index == 2) {
                         x_index = 0;
                     } else {
@@ -123,9 +126,9 @@ public class DragViewListener implements OnTouchListener {
                         }
                     }
 
-                } else if (3 <= x_index && x_index <= 4 && 10 <= y_index && y_index <= 11) {
+                } else if (x_index <= 2 && 10 <= y_index && y_index <= 11) {
                     for (int i = 0; i < 2; i++) {
-                        for (int j = 0; j < 11; j++) {
+                        for (int j = 0; j < 12; j++) {
                             if (view.getId() == cellsId[i][j]) {
                                 program[i][j] = "";
                             }
