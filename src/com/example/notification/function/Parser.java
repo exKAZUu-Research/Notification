@@ -45,7 +45,7 @@ public class Parser {
 
         for (int i = 0; i < 4; i++) {
             commands[i] += "!";
-            newParser2(commands[i], i);
+            newParser(commands[i], i);
         }
     }
 
@@ -198,39 +198,7 @@ public class Parser {
         return str;
     }
 
-    public void newParser(String com, int num) {     //音楽をならすのをわかりやすくするための解析
-        sc = new Scanner(com);
-        ArrayList<String> newcom = new ArrayList<String>();
-        String str = sc.next();
-        int pointer = 0;
-        while (str.charAt(pointer) != '!') {
-            pointer += 2;
-            int time = Integer.parseInt("" + str.charAt(pointer));
-            for (int i = 0; i < time; i++) {
-                newcom.add("ON");
-            }
-            pointer += 4;
-            time = Integer.parseInt("" + str.charAt(pointer));
-            for (int i = 0; i < time; i++) {
-                newcom.add("OFF");
-            }
-            pointer += 1;
-        }
-
-        for (int i = 0; i < newcom.size(); i++) {
-            if (num == 0) {
-                Gcom.add(newcom.get(i));
-            } else if (num == 1) {
-                Ccom.add(newcom.get(i));
-            } else if (num == 2) {
-                Tcom.add(newcom.get(i));
-            } else {
-                Fcom.add(newcom.get(i));
-            }
-        }
-    }
-
-    public void newParser2(String com, int num) {
+    public void newParser(String com, int num) {
         sc = new Scanner(com);
         ArrayList<String> newcom = new ArrayList<String>();
         String str = sc.next();
