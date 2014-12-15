@@ -289,8 +289,6 @@ public class MainActivity extends Activity {
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.toast_gmail, null);
 
-        //ImageView image = (ImageView) findViewById(R.id.toast_image);
-        //image.setImageResource(R.drawable.icon_gmail);
         Toast gtoast = new Toast(getApplicationContext());
         gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
         gtoast.setView(layout);
@@ -304,10 +302,8 @@ public class MainActivity extends Activity {
 
     public void onClickCalendarButton(View v) {
         LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.toast_gmail, null);
+        View layout = inflater.inflate(R.layout.toast_calendar, null);
 
-        ImageView image = (ImageView) findViewById(R.id.toast_image);
-        image.setImageResource(R.drawable.icon_gmail);
         Toast gtoast = new Toast(getApplicationContext());
         gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
         gtoast.setView(layout);
@@ -321,10 +317,8 @@ public class MainActivity extends Activity {
 
     public void onClickTwitterButton(View v) {
         LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.toast_gmail, null);
+        View layout = inflater.inflate(R.layout.toast_twitter, null);
 
-        ImageView image = (ImageView) findViewById(R.id.toast_image);
-        image.setImageResource(R.drawable.icon_gmail);
         Toast gtoast = new Toast(getApplicationContext());
         gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
         gtoast.setView(layout);
@@ -338,10 +332,8 @@ public class MainActivity extends Activity {
 
     public void onClickFacebookButton(View v) {
         LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.toast_gmail, null);
+        View layout = inflater.inflate(R.layout.toast_facebook, null);
 
-        ImageView image = (ImageView) findViewById(R.id.toast_image);
-        image.setImageResource(R.drawable.icon_gmail);
         Toast gtoast = new Toast(getApplicationContext());
         gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
         gtoast.setView(layout);

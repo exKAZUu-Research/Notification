@@ -10,9 +10,11 @@
 
                 </shape>
             </item>
+            <!--
             <item>
                 <bitmap android:src="@drawable/droid" android:gravity="center" />
             </item>
+            -->
         </layer-list>
     </item>
 

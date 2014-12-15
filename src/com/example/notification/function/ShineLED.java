@@ -19,7 +19,7 @@ public class ShineLED {
     }
 
     public void main() {
-        music = MediaPlayer.create(context, R.raw.led12060);
+        music = MediaPlayer.create(context, R.raw.led110110part2);
         //音をならす
         music.setLooping(true); //ループ設定
         music.seekTo(0);    //再生位置を0ミリ秒に設定
