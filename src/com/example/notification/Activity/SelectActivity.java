@@ -55,15 +55,14 @@ public class SelectActivity extends Activity {
             Log.e("ERROR", e.toString());
         }
 
+        //メインの表示
         String qrys = "SELECT name FROM product WHERE main = 'true'";
         Cursor cr2 = db.rawQuery(qrys, null);
         cr2.moveToFirst();
         int main = cr2.getColumnIndex("name");
-        if (main != 0) {
-            String mainName = cr2.getString(main);
-            TextView textViewMain = (TextView) findViewById(R.id.setMain);
-            textViewMain.setText("メイン：" + mainName);
-        }
+        String mainName = cr2.getString(main);
+        TextView textViewMain = (TextView) findViewById(R.id.setMain);
+        textViewMain.setText("メイン：" + mainName);
 
         //データの検索
         Cursor cr = db.rawQuery(qry3, null);
