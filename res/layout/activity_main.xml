@@ -63,6 +63,22 @@
         android:layout_toRightOf="@id/imageView7"
         android:src="@drawable/icon_off" />
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/action"
+        android:layout_toRightOf="@id/imageView8"
+        android:src="@drawable/icon_fadein" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_below="@id/action"
+        android:layout_toRightOf="@id/imageView13"
+        android:src="@drawable/icon_fadeout" />
+
     <TextView
         android:id="@+id/if_command"
         android:layout_width="wrap_content"
@@ -248,13 +264,6 @@
         android:layout_toRightOf="@id/imageView08"
         android:layout_below="@id/imageView06"
         android:src="@drawable/num9" />
-
-    <ImageView
-        android:id="@+id/imageView00"
-        android:layout_width="61dip"
-        android:layout_height="61dip"
-        android:layout_below="@id/imageView07"
-        android:src="@drawable/num0" />
 
     <!-- 背景たち -->
 

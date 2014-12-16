@@ -39,9 +39,6 @@ public class DragViewListener implements OnTouchListener {
         int left = dragView.getLeft() + (x - oldx);
         int top = dragView.getTop() + (y - oldy);
 
-        //int x_index = left / cells[0][0].getWidth();
-        //int y_index = top / cells[0][0].getHeight();
-
         //Nexus7 のサイズ800×1205
         int x_index = (800 - left) / cells[0][0].getWidth();
         int y_index = top / cells[0][0].getHeight();
@@ -87,6 +84,10 @@ public class DragViewListener implements OnTouchListener {
                             program[x_index][y_index] = "elseif";
                         } else if (view.getId() == R.id.imageView12) {
                             program[x_index][y_index] = "ifend";
+                        } else if (view.getId() == R.id.imageView13) {
+                            program[x_index][y_index] = "FadeIn";
+                        } else if (view.getId() == R.id.imageView14) {
+                            program[x_index][y_index] = "FadeOut";
                         } else if (view.getId() == R.id.imageView01) {
                             program[x_index][y_index] = "1";
                         } else if (view.getId() == R.id.imageView02) {
@@ -105,8 +106,6 @@ public class DragViewListener implements OnTouchListener {
                             program[x_index][y_index] = "8";
                         } else if (view.getId() == R.id.imageView09) {
                             program[x_index][y_index] = "9";
-                        } else if (view.getId() == R.id.imageView00) {
-                            program[x_index][y_index] = "0";
                         } else {
                             for (int i = 0; i < 2; i++) {
                                 for (int j = 0; j < 12; j++) {
@@ -167,6 +166,10 @@ public class DragViewListener implements OnTouchListener {
                             cells[i][j].setImageResource(R.drawable.icon_on);
                         } else if (program[i][j].equals("OFF")) {
                             cells[i][j].setImageResource(R.drawable.icon_off);
+                        } else if (program[i][j].equals("FadeIn")) {
+                            cells[i][j].setImageResource(R.drawable.icon_fadein);
+                        } else if (program[i][j].equals("FadeOut")) {
+                            cells[i][j].setImageResource(R.drawable.icon_fadeout);
                         } else if (program[i][j].equals("if")) {
                             cells[i][j].setImageResource(R.drawable.icon_if);
                         } else if (program[i][j].equals("else")) {

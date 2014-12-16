@@ -28,12 +28,10 @@ public class MainActivity extends Activity {
 
     String[][] program = new String[2][12];
     String[] commands = new String[4];
-    String[][] newcoms;
     ArrayList<String> Gcom = new ArrayList<String>();
     ArrayList<String> Ccom = new ArrayList<String>();
     ArrayList<String> Tcom = new ArrayList<String>();
     ArrayList<String> Fcom = new ArrayList<String>();
-    MediaPlayer music;
     String name;
 
     @Override
@@ -42,7 +40,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // 右側のテキストたち
-
         for (int i = 0; i < 12; i++) {
             for (int j = 0; j < 2; j++) {
                 program[j][i] = "";
@@ -152,6 +149,10 @@ public class MainActivity extends Activity {
                     cells[i][j].setImageResource(R.drawable.icon_on);
                 } else if (program[i][j].equals("OFF")) {
                     cells[i][j].setImageResource(R.drawable.icon_off);
+                } else if (program[i][j].equals("FadeIn")) {
+                    cells[i][j].setImageResource(R.drawable.icon_fadein);
+                } else if (program[i][j].equals("FadeOut")) {
+                    cells[i][j].setImageResource(R.drawable.icon_fadeout);
                 } else if (program[i][j].equals("if")) {
                     cells[i][j].setImageResource(R.drawable.icon_if);
                 } else if (program[i][j].equals("else")) {
@@ -178,8 +179,6 @@ public class MainActivity extends Activity {
                     cells[i][j].setImageResource(R.drawable.num8);
                 } else if (program[i][j].equals("9")) {
                     cells[i][j].setImageResource(R.drawable.num9);
-                } else if (program[i][j].equals("0")) {
-                    cells[i][j].setImageResource(R.drawable.num0);
                 } else {
                     cells[i][j].setImageResource(R.drawable.haikei_kuro);
                 }
@@ -213,16 +212,16 @@ public class MainActivity extends Activity {
 
         // ドラッグ対象Viewとイベント処理クラスを紐付ける
         // アイコンたち
-        int[][] iconsId = new int[2][12];
-        ImageView[][] dragView = new ImageView[2][12];
-        DragViewListener[][] listener = new DragViewListener[2][12];
-        for (int i = 0; i < 12; i++) {
+        int[][] iconsId = new int[2][14];
+        ImageView[][] dragView = new ImageView[2][14];
+        DragViewListener[][] listener = new DragViewListener[2][14];
+        for (int i = 0; i < 14; i++) {
             iconsId[0][i] = this.getResources().getIdentifier("imageView" + (i + 1), "id", this.getPackageName());
             dragView[0][i] = (ImageView) findViewById(iconsId[0][i]);
             listener[0][i] = new DragViewListener(dragView[0][i], cells, program, text, flag, cellsId, canwrite);
             dragView[0][i].setOnTouchListener(listener[0][i]);
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
             iconsId[1][i] = this.getResources().getIdentifier("imageView0" + i, "id", this.getPackageName());
             dragView[1][i] = (ImageView) findViewById(iconsId[1][i]);
             listener[1][i] = new DragViewListener(dragView[1][i], cells, program, text, flag, cellsId, canwrite);
@@ -290,7 +289,7 @@ public class MainActivity extends Activity {
         View layout = inflater.inflate(R.layout.toast_gmail, null);
 
         Toast gtoast = new Toast(getApplicationContext());
-        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         gtoast.setView(layout);
         gtoast.show();
 
@@ -305,7 +304,7 @@ public class MainActivity extends Activity {
         View layout = inflater.inflate(R.layout.toast_calendar, null);
 
         Toast gtoast = new Toast(getApplicationContext());
-        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         gtoast.setView(layout);
         gtoast.show();
 
@@ -320,7 +319,7 @@ public class MainActivity extends Activity {
         View layout = inflater.inflate(R.layout.toast_twitter, null);
 
         Toast gtoast = new Toast(getApplicationContext());
-        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         gtoast.setView(layout);
         gtoast.show();
 
@@ -335,7 +334,7 @@ public class MainActivity extends Activity {
         View layout = inflater.inflate(R.layout.toast_facebook, null);
 
         Toast gtoast = new Toast(getApplicationContext());
-        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        gtoast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         gtoast.setView(layout);
         gtoast.show();
 

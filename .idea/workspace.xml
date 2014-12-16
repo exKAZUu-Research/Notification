@@ -27,10 +27,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fc03fe3-91ed-4fbc-b144-a1d43c009019" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/fadein.WAV" afterPath="$PROJECT_DIR$/res/raw/fadein.WAV" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/fadeout.WAV" afterPath="$PROJECT_DIR$/res/raw/fadeout.WAV" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/function/Parser.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help5.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help5.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help5.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help6.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help6.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help6.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/help7.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/help7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/help7.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/help7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/help7.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/help7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" afterPath="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" afterPath="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Notification.iws" />
@@ -57,29 +77,56 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4446" max-vertical-offset="5593">
-              <caret line="145" column="21" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
-              <folding>
-                <element signature="e#1021#1029#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4459" max-vertical-offset="5168">
-              <caret line="317" column="47" selection-start-line="317" selection-start-column="47" selection-end-line="317" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="5576">
+              <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShineLED.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SelectActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.72868216" vertical-offset="594" max-vertical-offset="5814">
+              <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+              <folding>
+                <element signature="e#2743#2751#0" expanded="true" />
+                <element signature="e#3304#6722#0" expanded="true" />
+                <element signature="e#4214#6397#0" expanded="true" />
+                <element signature="e#6366#6367#0" expanded="true" />
+                <element signature="e#6711#6712#0" expanded="true" />
+                <element signature="e#6792#7400#0" expanded="true" />
+                <element signature="e#7389#7390#0" expanded="true" />
+                <element signature="e#7757#8112#0" expanded="true" />
+                <element signature="e#8097#8098#0" expanded="true" />
+                <element signature="e#8164#13884#0" expanded="true" />
+                <element signature="e#8358#8366#0" expanded="true" />
+                <element signature="e#8428#8436#0" expanded="true" />
+                <element signature="e#8498#8506#0" expanded="true" />
+                <element signature="e#8568#8576#0" expanded="true" />
+                <element signature="e#8700#8708#0" expanded="true" />
+                <element signature="e#13869#13870#0" expanded="true" />
+                <element signature="e#14337#15102#0" expanded="true" />
+                <element signature="e#15087#15088#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DragViewListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="4199">
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShineLED.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6230366" vertical-offset="408" max-vertical-offset="1156">
+            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1275">
               <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding />
             </state>
@@ -89,7 +136,7 @@
       <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4216">
+            <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="4267">
               <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
               <folding />
             </state>
@@ -102,8 +149,18 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.166667" vertical-offset="112" max-vertical-offset="12784">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state vertical-scroll-proportion="-2.9" vertical-offset="4418" max-vertical-offset="12937">
+              <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -152,27 +209,27 @@
         <option value="$PROJECT_DIR$/res/layout/row.xml" />
         <option value="$PROJECT_DIR$/src/com/example/notification/function/NotificationListener.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/Activity/NextActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
         <option value="$PROJECT_DIR$/res/drawable/dotted_line.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/res/drawable/button_customize.xml" />
         <option value="$PROJECT_DIR$/res/drawable/toast_gmail.xml" />
         <option value="$PROJECT_DIR$/res/layout/toast_gmail.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_title.xml" />
         <option value="$PROJECT_DIR$/res/drawable/select_background.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_select.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_help.xml" />
         <option value="$PROJECT_DIR$/res/layout/toast_calendar.xml" />
         <option value="$PROJECT_DIR$/res/layout/toast_twitter.xml" />
         <option value="$PROJECT_DIR$/res/layout/toast_facebook.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/function/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java" />
       </list>
     </option>
   </component>
@@ -208,7 +265,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -405,6 +461,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -620,7 +677,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -635,7 +692,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32066116" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31735536" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5223141" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -696,7 +753,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="5287">
           <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#2743#2751#0" expanded="true" />
+            <element signature="e#3304#6722#0" expanded="true" />
+            <element signature="e#4214#6397#0" expanded="true" />
+            <element signature="e#6366#6367#0" expanded="true" />
+            <element signature="e#6711#6712#0" expanded="true" />
+            <element signature="e#6792#7400#0" expanded="true" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7757#8112#0" expanded="true" />
+            <element signature="e#8097#8098#0" expanded="true" />
+            <element signature="e#8164#13884#0" expanded="true" />
+            <element signature="e#8358#8366#0" expanded="true" />
+            <element signature="e#8428#8436#0" expanded="true" />
+            <element signature="e#8498#8506#0" expanded="true" />
+            <element signature="e#8568#8576#0" expanded="true" />
+            <element signature="e#8700#8708#0" expanded="true" />
+            <element signature="e#13869#13870#0" expanded="true" />
+            <element signature="e#14337#15102#0" expanded="true" />
+            <element signature="e#15087#15088#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -722,9 +798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4573" max-vertical-offset="5338">
           <caret line="269" column="22" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="22" />
-          <folding>
-            <element signature="e#1021#1029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +813,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="5440">
           <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2743#2751#0" expanded="true" />
+            <element signature="e#3304#6722#0" expanded="true" />
+            <element signature="e#4214#6397#0" expanded="true" />
+            <element signature="e#6366#6367#0" expanded="true" />
+            <element signature="e#6711#6712#0" expanded="true" />
+            <element signature="e#6792#7400#0" expanded="true" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7757#8112#0" expanded="true" />
+            <element signature="e#8097#8098#0" expanded="true" />
+            <element signature="e#8164#13884#0" expanded="true" />
+            <element signature="e#8358#8366#0" expanded="true" />
+            <element signature="e#8428#8436#0" expanded="true" />
+            <element signature="e#8498#8506#0" expanded="true" />
+            <element signature="e#8568#8576#0" expanded="true" />
+            <element signature="e#8700#8708#0" expanded="true" />
+            <element signature="e#13869#13870#0" expanded="true" />
+            <element signature="e#14337#15102#0" expanded="true" />
+            <element signature="e#15087#15088#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -758,9 +851,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2193">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#1021#1029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,9 +877,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1666">
           <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-          <folding>
-            <element signature="e#1021#1029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -920,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3392226" vertical-offset="431" max-vertical-offset="901">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -979,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15962441" vertical-offset="0" max-vertical-offset="4148">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_select.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1025,17 +1098,6 @@
         <state vertical-scroll-proportion="-1.1333333" vertical-offset="0" max-vertical-offset="476">
           <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.091623" vertical-offset="102" max-vertical-offset="1105">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-          <folding>
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,32 +1145,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.166667" vertical-offset="112" max-vertical-offset="12784">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1156">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4459" max-vertical-offset="5168">
-          <caret line="317" column="47" selection-start-line="317" selection-start-column="47" selection-end-line="317" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4446" max-vertical-offset="5593">
-          <caret line="145" column="21" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
-          <folding>
-            <element signature="e#1021#1029#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,11 +1161,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/ShineLED.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6230366" vertical-offset="408" max-vertical-offset="1156">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/HelpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8178694" vertical-offset="51" max-vertical-offset="1003">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9" vertical-offset="4418" max-vertical-offset="12937">
+          <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/function/DragViewListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="4199">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="5576">
+          <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/notification/Activity/SelectActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72868216" vertical-offset="594" max-vertical-offset="5814">
+          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+          <folding>
+            <element signature="e#2743#2751#0" expanded="true" />
+            <element signature="e#3304#6722#0" expanded="true" />
+            <element signature="e#4214#6397#0" expanded="true" />
+            <element signature="e#6366#6367#0" expanded="true" />
+            <element signature="e#6711#6712#0" expanded="true" />
+            <element signature="e#6792#7400#0" expanded="true" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7757#8112#0" expanded="true" />
+            <element signature="e#8097#8098#0" expanded="true" />
+            <element signature="e#8164#13884#0" expanded="true" />
+            <element signature="e#8358#8366#0" expanded="true" />
+            <element signature="e#8428#8436#0" expanded="true" />
+            <element signature="e#8498#8506#0" expanded="true" />
+            <element signature="e#8568#8576#0" expanded="true" />
+            <element signature="e#8700#8708#0" expanded="true" />
+            <element signature="e#13869#13870#0" expanded="true" />
+            <element signature="e#14337#15102#0" expanded="true" />
+            <element signature="e#15087#15088#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

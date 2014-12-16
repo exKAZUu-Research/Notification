@@ -45,7 +45,7 @@ public class SelectActivity extends Activity {
         SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
 
         //データベース
-        String qry1 = "CREATE TABLE product" + "(id INTEGER PRIMARY KEY, name STRING, main STRING)";
+        String qry1 = "CREATE TABLE product" + "(id INTEGER PRIMARY KEY, name STRING)";
         String qry3 = "SELECT * FROM product";
 
         //テーブルの作成
@@ -56,13 +56,27 @@ public class SelectActivity extends Activity {
         }
 
         //メインの表示
-        String qrys = "SELECT name FROM product WHERE main = 'true'";
-        Cursor cr2 = db.rawQuery(qrys, null);
+        String mainc = "CREATE TABLE whichMain" + "(id INTEGER PRIMARY KEY, main STRING)";
+        String mains = "SELECT main FROM whichMain";
+        try {
+            db.execSQL(mainc);
+        } catch (SQLException e) {
+            Log.e("ERROR", e.toString());
+        }
+
+        Cursor cr2 = db.rawQuery(mains, null);
         cr2.moveToFirst();
-        int main = cr2.getColumnIndex("name");
+        int main = cr2.getColumnIndex("main");
+        String countSQL = "SELECT COUNT(*) FROM whichMain";
+        Cursor c = db.rawQuery(countSQL,null);
+        c.moveToLast();
+        long count = c.getLong(0);
+        System.out.println(count);
+        if (count != 0) {
         String mainName = cr2.getString(main);
         TextView textViewMain = (TextView) findViewById(R.id.setMain);
         textViewMain.setText("メイン：" + mainName);
+        }
 
         //データの検索
         Cursor cr = db.rawQuery(qry3, null);
@@ -73,9 +87,7 @@ public class SelectActivity extends Activity {
         while (cr.moveToNext()) {
             int i = cr.getColumnIndex("id");
             int n = cr.getColumnIndex("name");
-            int id = cr.getInt(i);
             String name = cr.getString(n);
-
             adapter.add(name);
             file.add(name);
         }
@@ -109,17 +121,23 @@ public class SelectActivity extends Activity {
                                 public void onClick(DialogInterface dialog, int which) {
                                     Log.d("TAG", "input text = " + editText.getText().toString());
                                     if (!file.contains(editText.getText().toString())) {
-                                        String fileName = editText.getText().toString();
-                                        file.add(fileName);
+                                        if (editText.getText().toString().equals("新しく作る") || editText.getText().toString().equals("")) {
+                                            Toast toast = Toast.makeText(SelectActivity.this, "そんな名前はつけられないよ", Toast.LENGTH_SHORT);
+                                            toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                                            toast.show();
+                                        } else {
+                                            String fileName = editText.getText().toString();
+                                            file.add(fileName);
 
-                                        String str = "data/data/" + getPackageName() + "/Sample.db";
-                                        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
-                                        String qry = "INSERT INTO product(name, main) VALUES('" + fileName + "', 'false')";
-                                        db.execSQL(qry);
-                                        //db.close();
-
-                                        Intent intent = new Intent(SelectActivity.this, SelectActivity.class);
-                                        startActivity(intent);
+                                            String str = "data/data/" + getPackageName() + "/Sample.db";
+                                            SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(str, null);
+                                            String qry = "INSERT INTO product(name) VALUES('" + fileName + "')";
+                                            db.execSQL(qry);
+                                            //db.close();
+                                            finish();
+                                            Intent intent = new Intent(SelectActivity.this, SelectActivity.class);
+                                            startActivity(intent);
+                                        }
                                     } else {
                                         Toast toast = Toast.makeText(SelectActivity.this, "名前が重複しています", Toast.LENGTH_SHORT);
                                         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -194,8 +212,8 @@ public class SelectActivity extends Activity {
                     }
 
                     //メインかどうかのフラグの更新
-                    String qryu2 = "UPDATE product SET main = 'false'";
-                    String qryu = "UPDATE product SET main = 'true' WHERE name = '" + ClickItem + "'";
+                    String qryu2 = "DELETE FROM whichMain";
+                    String qryu = "INSERT INTO whichMain(main) VALUES('" + ClickItem + "')";
                     db.execSQL(qryu2);
                     db.execSQL(qryu);
 
@@ -289,10 +307,11 @@ public class SelectActivity extends Activity {
                         db.execSQL(qry);
                     }
 
-                    String qrys = "SELECT name FROM product WHERE main = 'true'";
+                    String qrys = "SELECT main FROM whichMain";
                     Cursor cr2 = db.rawQuery(qrys, null);
                     cr2.moveToFirst();
-                    int main = cr2.getColumnIndex("name");
+                    int main = cr2.getColumnIndex("main");
+                    System.out.println("つくると" + main);
                     String mainName = cr2.getString(main);
                     TextView textViewMain = (TextView) findViewById(R.id.setMain);
                     textViewMain.setText("メイン：" + mainName);
@@ -324,6 +343,7 @@ public class SelectActivity extends Activity {
                     db.execSQL(qry);
                     //db.close();
 
+                    finish();
                     Intent intent = new Intent(SelectActivity.this, SelectActivity.class);
                     startActivity(intent);
                 }
